@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Delta V Senior Design (Database - group 10)
 
 You can use the [editor on GitHub](https://github.com/cs499s18p10/cs499s18p10/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
