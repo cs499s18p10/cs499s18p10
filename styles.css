@@ -1,0 +1,20 @@
+p {
+  color:black;
+  /*background-color:gray;
+  font-size: 130%;*/
+}
+
+h1 {
+  color:yellow;
+}
+
+h3 {
+  color:blue;
+}
+
+/*
+body {
+  color: red;
+  font-family: Arial, Helvetica, sans-serif;
+  /*It's good practice to list several fonts in case the computer doesn't support the first it has somethingn to fall back on*/
+}*/
