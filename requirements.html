@@ -8,30 +8,49 @@
    <h3><i>Priority Order of Requirements</i></h3>
     <p><b>1. Have a database within the cloud</b><br>
       The primary goal of the project is to have a database stored within the cloud. This will allow for database communication with 
-      all systems neccessary for essential crash scene investigation.
+      all systems neccessary for essential crash scene investigation. <br>
+      Use <a href="https://azure.microsoft.com/en-us/">Microsoft Azure</a> or <a href="https://aws.amazon.com/what-is-aws/">Amazon AWS</a>
+      <i>Effort and Size Estimation: </i> Creating a database within the cloud should be a fairly simple task. Microsoft offers their 
+      Azure cloud storage and Amazon offers its AWS. Creating a database within the cloud should be as simple as signing up for one
+      of these services.
     </p>
-    <p><b>2. Internet Communication protocols to the desktop software and mobile device for data sent to clients, adn storage of data 
+    <p><b>2. Internet Communication protocols to the desktop software and mobile device for data sent to clients, and storage of data 
       recieved from clients</b><br>
       Communication protocals must be established to ensure that data can be sent from mobile devices in the field and properly stored
       in the cloud database. Additionally, communication protocals must also be developed for the desktop aplication side allowing it to
       properly communicate with the cloud application and pull essential crash scene information needed for scene development.
+      <i>Effort and Size Estimation: </i> To develop communication protocols our team must research the system we decide to use (Microsoft
+      Azure vs Amazon AWS) and the way data can be stored and accessed within their cloud. Doing this research and correctly designing 
+      protocols to follow their established standards could take a couple days although there should be plenty of information avaliable as
+      to how this is done. <br>
+      <a href="https://docs.microsoft.com/en-us/azure/sql-database/">Microsoft Azure Database Documentation</a>
+      <a href="https://aws.amazon.com/rds/?nc2=h_m1">Amazon AWS Database Documentation</a>
     </p>
     <p><b>3. Database created with typical tables and/or fields needed for data for the initial functions to be developed</b><br>
       The cloud database must be created and developed with initial relational tables and their essential corresponding attributes being 
       designed. Note that as the project progresses more and more tables and the overall schema behind the database will most likely 
       change.
+      <i>Effort and Size Estimation: </i> Designing the initial database and tables will be a week or two process as it will involve back 
+      and forth communication with the customer to ensure our design meets the information requirements they have as the database we 
+      develop will be a large system. Making additons to the database per customer requests throughout the semester will also be necessary.
+      <a href="<a href="https://docs.microsoft.com/en-us/azure/sql-database/">Microsoft Azure Database Documentation</a>">Microsoft Azure Database Creation</a>
+      <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_GettingStarted.CreatingConnecting.SQLServer.html">Amazon AWS Database Creation</a>
     </p>
     <p><b>4. SQL table updates to insert initial data</b><br>
       The team will have access to crash scene data from the past 20 years from the Cincinnati area as guaranteed from the customer. 
       SQL queries must be developed to ensure this data can accurately and securely be transferred from these servers to the cloud
       database. Additionally, the customer has a series of tables with friction gradients, car information, etc. that must be uploaded
       to the cloud database. SQL queries to transfer this information from the current format to the cloud database must be designed.
+      <i>Effort and Size Estimation: </i> This part of the project may very well be the most difficult and will most likely take 
+      a couple weeks or even a month to accompish. The customer currently has 3TB of data stored on a police server that must be 
+      trasnferred over as well as tables of information if several different formats that must be uploaded. 
     </p>
     <p><b>5. SQL queries for data for the first functions to be developed</b><br>
       SQL queries must be designed that allow for the first functions of the mobile and desktop applications to be tested. This queries
       will function by using the communication protocols established in step 2. to send data from the mobile app to the cloud server and 
       consequently pull information from the cloud server to the desktop application. Initial SQL queries must be designed to ensure 
       information is stored and accessed accurately, quickly, and effeciently. 
+      <i>Effort and Size Estimation: </i> 
     </p>
     <p><b>6. Security protocols to restrict access to data and programs (starting with user ID and password)</b><br>
       Security protocols must be designed to ensure that the proper users/individuals have access to only the neccessary data 
