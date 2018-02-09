@@ -5,11 +5,12 @@ p {
 }
 
 h1 {
-  color:yellow;
+  color:gold;
 }
 
 h3 {
   color:blue;
+  font-type:italics;
 }
 
 /*
