@@ -16,19 +16,12 @@
       The primary goal of the project is to have a database stored within the cloud. This will allow for database communication with 
       all systems neccessary for essential crash scene investigation. <br>
       Use <a href="https://azure.microsoft.com/en-us/">Microsoft Azure</a> or <a href="https://aws.amazon.com/what-is-aws/">Amazon AWS</a>
-      <br><i>Effort and Size Estimation: </i> Creating a database within the cloud should be a fairly simple task. Microsoft offers their 
-      Azure cloud storage and Amazon offers its AWS. Creating a database within the cloud should be as simple as signing up for one
-      of these services.
     </p>
     <p><b>3. Internet Communication protocols to the desktop software and mobile device for data sent to clients, and storage of data 
       recieved from clients</b><br>
       Communication protocals must be established to ensure that data can be sent from mobile devices in the field and properly stored
       in the cloud database. Additionally, communication protocals must also be developed for the desktop aplication side allowing it to
-      properly communicate with the cloud application and pull essential crash scene information needed for scene development.
-      <br><i>Effort and Size Estimation: </i> To develop communication protocols our team must research the system we decide to use (Amazon 
-      AWS) and the way data can be stored and accessed within their cloud. Doing this research and correctly designing 
-      protocols to follow their established standards could take a couple days although there should be plenty of information avaliable as
-      to how this is done. <br>
+      properly communicate with the cloud application and pull essential crash scene information needed for scene development. <br>
       <a href="https://docs.microsoft.com/en-us/azure/sql-database/">Microsoft Azure Database Documentation</a><br>
       <a href="https://aws.amazon.com/rds/?nc2=h_m1">Amazon AWS Database Documentation</a>
     </p>
@@ -36,9 +29,6 @@
       The cloud database must be created and developed with initial relational tables and their essential corresponding attributes being 
       designed. Note that as the project progresses more and more tables and the overall schema behind the database will most likely 
       change.
-      <br><i>Effort and Size Estimation: </i> Designing the initial database and tables will be a week or two process as it will involve back 
-      and forth communication with the customer to ensure our design meets the information requirements they have as the database we 
-      develop will be a large system. Making additons to the database per customer requests throughout the semester will also be necessary.
       <br><a href="https://docs.microsoft.com/en-us/azure/sql-database/sql-database-get-started-portal">Microsoft Azure Database Database Creation</a>
       <br><a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_GettingStarted.CreatingConnecting.SQLServer.html">Amazon AWS Database Creation</a>
     </p>
@@ -47,29 +37,18 @@
       SQL queries must be developed to ensure this data can accurately and securely be transferred from these servers to the cloud
       database. Additionally, the customer has a series of tables with friction gradients, car information, etc. that must be uploaded
       to the cloud database. SQL queries to transfer this information from the current format to the cloud database must be designed.
-      <br><i>Effort and Size Estimation: </i> This part of the project may very well be the most difficult and could take 
-      a couple weeks or even a month to accompish. The customer currently has 3TB of data stored on a police server that must be 
-      trasnferred over as well as tables of information in several different formats that must be uploaded. Correctly storing and 
-      transferring this information to the cloud may be challenging.<br>
-      Note: Transferring the 3TB of data over is no a longer term goal... we will have to transfer over some initial data but it won't be
-      nearly this large.
     </p>
     <p><b>6. SQL queries for data for the first functions to be developed</b><br>
       SQL queries must be designed that allow for the first functions of the mobile and desktop applications to be tested. This queries
       will function by using the communication protocols established in step 2. to send data from the mobile app to the cloud server and 
       consequently pull information from the cloud server to the desktop application. Initial SQL queries must be designed to ensure 
       information is stored and accessed accurately, quickly, and effeciently. 
-      <br><i>Effort and Size Estimation: </i> Developing initial queries will take a week or two depending on the involvement of the query.
-      Note this will also be an ongoing process as more functionalities are added to the mobile and desktop app as the semester progresses.
       <br><a href="https://www.w3schools.com/sql/default.asp">SQL Queries</a>
     </p>
     <p><b>7. Security protocols to restrict access to data and programs (starting with user ID and password)</b><br>
       Security protocols must be designed to ensure that the proper users/individuals have access to only the neccessary data 
       they need to perform their duties. Protocols must also be develped to ensure updates or changes to the database cannot be 
       made without the proper access clearences. 
-      <br><i>Effort and Size Estimation: </i> This step will most likely be a week long process and again will be something that will
-      constantly be evaluated throughout the semester to meet customer needs. Our group will seek to implement aspects of 
-      <a href="https://en.wikipedia.org/wiki/Discretionary_access_control">Discretionary Access Control</a>
     </p>
     <p><b>8. Other initial functions viewed as important by the customer</b><br>
       <i>a.</i> Create a method that permits an easy update of database (IE Vehicle Database) annually or as updates become available to the 
@@ -82,6 +61,49 @@
      This project will require every group member to work diligently for several hours per week.  Each member will be required to work on thier own as well as within their group to complete 
       each of the goals that we have established below.  For the purpose of this project our end goal is to complete a proof of concept to our customer to show the functionality of our database with respect
       to the mobile and desktop applications. This project will take a minimum of ten weeks to implement. The cohesiveness between the three different project groups will ultimately decide when this project will be complete.
+    </p>
+    
+    <p><b>1. Work with other teams on the desktop and mobile applications</b><br>
+      
+    </p>
+    <p><b>2. Have a database within the cloud (Decided to go with Amazon AWS Cloud)</b><br>
+      Creating a database within the cloud should be a fairly simple task. Microsoft offers their 
+      Azure cloud storage and Amazon offers its AWS. Creating a database within the cloud should be as simple as signing up for one
+      of these services.
+    </p>
+    <p><b>3. Internet Communication protocols to the desktop software and mobile device for data sent to clients, and storage of data 
+      recieved from clients</b><br>
+      To develop communication protocols our team must research the system we decide to use (Amazon 
+      AWS) and the way data can be stored and accessed within their cloud. Doing this research and correctly designing 
+      protocols to follow their established standards could take a couple days although there should be plenty of information avaliable as
+      to how this is done. 
+    </p>
+    <p><b>4. Database created with typical tables and/or fields needed for data for the initial functions to be developed</b><br>
+      Designing the initial database and tables will be a week or two process as it will involve back 
+      and forth communication with the customer to ensure our design meets the information requirements they have as the database we 
+      develop will be a large system. Making additons to the database per customer requests throughout the semester will also be necessary.
+    </p>
+    <p><b>5. SQL table updates to insert initial data</b><br>
+      This part of the project may very well be the most difficult and could take 
+      a couple weeks or even a month to accompish. The customer currently has 3TB of data stored on a police server that must be 
+      trasnferred over as well as tables of information in several different formats that must be uploaded. Correctly storing and 
+      transferring this information to the cloud may be challenging.<br>
+      Note: Transferring the 3TB of data over is no a longer term goal... we will have to transfer over some initial data but it won't be
+      nearly this large.
+    </p>
+    <p><b>6. SQL queries for data for the first functions to be developed</b><br>
+      Developing initial queries will take a week or two depending on the involvement of the query.
+      Note this will also be an ongoing process as more functionalities are added to the mobile and desktop app as the semester progresses.
+    </p>
+    <p><b>7. Security protocols to restrict access to data and programs (starting with user ID and password)</b><br>
+      This step will most likely be a week long process and again will be something that will
+      constantly be evaluated throughout the semester to meet customer needs. Our group will seek to implement aspects of 
+      <a href="https://en.wikipedia.org/wiki/Discretionary_access_control">Discretionary Access Control</a>
+    </p>
+    <p><b>8. Other initial functions viewed as important by the customer</b><br>
+      <i>a.</i> Create a method that permits an easy update of database (IE Vehicle Database) annually or as updates become available to the 
+      company. <br>
+      <i>b.</i> As database updates are installed, allow for pushing of data back to the mobile and desktop applications. 
     </p>
     
     <h3>Schedule and Milestones</h3>
