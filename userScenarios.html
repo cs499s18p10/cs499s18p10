@@ -9,13 +9,18 @@
     <p>However, our group is only one part of the broader project: the database. Therefore, in a sense, our users are the mobile and desktop application, and our job is giving them the ability to easily access and edit the database, without ever altering the structure of the database itself. This was accomplished by creating a MySQL database in AWS’s Relational Database Services, and allowing the desktop and mobile applications to perform one of the following actions using SQL commands:</p>
     <h3>1.	Searching (Querying) the database to retrieve information</h3>
     <p>When a user on the mobile or desktop application wishes to access information from a certain case, that 
-    information must be pulled from the cloud. This is done using basic SQL commands like so:</p>
+    information must be pulled from the cloud. This is done using basic SQL commands.</p>
+    <p>The mobile or desktop program will receive text or a menu selection for what data is being summoned. Then, the program
+    can use SQL commands to query and get whatever data is necessary.
     <h3>2.	Writing to the database to upload information</h3>
     <p>When a user on the mobile application arrives at the scene of the crash, they will gather
     data to eventually upload to their new case number within the application. Once the data is ready for upload,
-    one of several simple SQL commands can move the data from the phone up to the database:</p>
+    simple SQL commands can upload plain text, numbers, or image files.</p>
     <h3>3.	Deleting a piece of information from the database</h3>
     <p>At times, data may need to be removed from the database. Perhaps an officer realizes his or her notes are innacurate,
-    or that they uploaded an image of poor quality. Such information can be removed in the following ways:</p>
+    or that they uploaded an image of poor quality. In such a situation, they will want to delete such data. Luckily,
+    our database can easily handle this, allowing for removal of data from tables within the database using SQL commands.</p>
+    <h3>Example SQL Commands:</h3>
+    <p></p>
   </body>
  </html>
