@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <h1>MySQL Commands</h1>
+    
+    <h3> To create the Database itself </h3>
+    
+    <p> CREATE DATABASE MyDatabase; </p>
+    
+    <h3> To use the database </h3>
+    
+    <p> USE MyDatabase; </p>
+    
+    <h3> To build the occupant table </h3>
+    
+    <p>
+      CREATE TABLE occupant (
+      id INT PRIMARY KEY NOT NULL,
+      name VARCHAR(45) UNIQUE NOT NULL,
+      impairment VARCHAR(45) NOT NULL,
+      seatbeltUsage VARCHAR(1) NOT NULL,
+      type VARCHAR(45) NOT NULL,
+      phoneNumber VARCHAR(10) NOT NULL,
+      DOB DATE NOT NULL,
+      street VARCHAR(45) NOT NULL,
+      state VARCHAR(15) NOT NULL,
+      city VARCHAR(45) NOT NULL,
+      zip VARCHAR(10) NOT NULL,
+      VIN VARCHAR(45) NOT NULL,
+      FOREIGN KEY fk(VIN) REFERENCES vehicle(VIN)
+      );
+    </p>
+    
+    <h3> To build the vehicle table </h3>
+    
+    <p>
+      CREATE TABLE vehicle (
+      VIN VARCHAR(45) PRIMARY KEY NOT NULL,
+      model VARCHAR(45) NOT NULL,
+      year VARCHAR(4) NOT NULL,
+      make VARCHAR(45) NOT NULL,
+      speed INT NOT NULL,
+      color VARCHAR(45) NOT NULL,
+      airbagDeploy VARCHAR(1) NOT NULL,
+      state VARCHAR(15) NOT NULL,
+      expiration DATE NOT NULL,
+      number VARCHAR(15) NOT NULL,
+      case VARCHAR(45) NOT NULL,
+      FOREIGN KEY fk(case) REFERENCES case(name)
+      );
+    </p>
+    
+    <h3> To build the case table </h3>
+    
+    <p>
+      CREATE TABLE case (
+      name VARCHAR(45) PRIMARY KEY NOT NULL,
+      roadConditions VARCHAR(45) NOT NULL,
+      street VARCHAR(45) NOT NULL,
+      city VARCHAR(45) NOT NULL,
+      zip VARCHAR(10) NOT NULL,
+      date DATE NOT NULL,
+      time TIMESTAMP NOT NULL,
+      lighting VARCHAR(45) NOT NULL,
+      visibility VARCHAR(45) NOT NULL,
+      temperature INT NOT NULL,
+      weather VARCHAR(45) NOT NULL,
+      investigator INT NOT NULL,
+      group VARCHAR(45) NOT NULL,
+      FOREIGN KEY fk(investigator) REFERENCES user(username),
+      FOREIGN KEY fkk(group) REFERENCES workGroup(id)
+      );
+    </p>
+    
+    <h3> To build the user table </h3>
+    
+    <p>
+      CREATE TABLE user (
+      username VARCHAR(45) PRIMARY KEY NOT NULL,
+      name VARCHAR(45) NOT NULL,
+      password VARCHAR(45) NOT NULL
+      );
+    </p>
+    
+    <h3> To build the workGroup table </h3>
+    
+    <p>
+      CREATE TABLE workGroup (
+      id INT PRIMARY KEY NOT NULL,
+      name VARCHAR(45) NOT NULL
+      );
+    </p>
+      
+    <h3> To build the model table </h3>
+    
+    <p>
+      CREATE TABLE model (
+      make VARCHAR(45) PRIMARY KEY NOT NULL,
+      model VARCHAR(45) PRIMARY KEY NOT NULL,
+      startYear VARCHAR(4) PRIMARY KEY NOT NULL,
+      endYear VARCHAR(4) PRIMARY KEY NOT NULL,
+      frontTire INT NOT NULL,
+      rearTire INT NOT NULL,
+      doors INT NOT NULL,
+      bodyStyle VARCHAR(45) NOT NULL,
+      driveWheels INT NOT NULL,
+      curbHeight INT NOT NULL,
+      weightFront INT NOT NULL,
+      weightRear INT NOT NULL,
+      length INT NOT NULL,
+      width INT NOT NULL,
+      height INT NOT NULL,
+      wheelbase INT NOT NULL,
+      FOH VARCHAR(45) NOT NULL,
+      frontTrack INT NOT NULL,
+      rearTrack INT NOT NULL,
+      frontBumperHeight INT NOT NULL,
+      rearBumperHeight INT NOT NULL,
+      groundToBaseWindsheild INT NOT NULL,
+      stabilityRatio VARCHAR(10) NOT NULL,
+      CGH VARCHAR(45) NOT NULL,
+      stabilityTrack VARCHAR(45) NOT NULL
+      );
+    </p>
+    
+    <h3> To build the userWorkGroup table </h3>
+    
+    <p>
+      CREATE TABLE userWorkGroup (
+      username VARCHAR(45) PRIMARY KEY NOT NULL,
+      workGroupID VARCHAR(45) PRIMARY KEY NOT NULL,
+      FOREIGN KEY fk(username) REFERENCES user(username),
+      FOREIGN KEY fkk(workGroupID) REFERENCES workGroup(id)
+      );
+    </p>
+    
+    <h3> To build the reference table </h3>
+    
+    <p>
+      CREATE TABLE reference (
+      caseID VARCHAR(45) PRIMARY KEY NOT NULL,
+      witnessNotes VARCHAR(1000) NOT NULL,
+      personalNotes VARCHAR(1000) NOT NULL,
+      FOREIGN KEY fk(caseID) REFERENCES case(name)
+      );
+    </p>
+    
+    
+    
+  </body>
+ </html>
