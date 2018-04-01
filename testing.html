@@ -35,15 +35,31 @@
     
     <h3> Integration / Function Testing </h3>
     
-    <p> Integration testing stuff
+    <p> To do the integr
     </p>
     
     <h3> System Testing </h3>
     
-    <p> System testing stuff...
+    <p> To do the system testing the AWS cloud relational database must be used versus the test database on myUK. This is required as 
+      the overall system of our project consists of the cloud database, the mobile application, and the desktop application. To do the 
+      system test the SQL queries developed in the integration / function testing portion must be coded into the mobile and desktop 
+      application backgrounds. This is required because the user will actually cause these queries to be processed by writing data to 
+      the cloud from the mobile side or pulling data down from the cloud from the desktop side.
     </p>
     
+    <p> To test the queries developed in the integration / function sections for the mobile application system a user must be able to 
+      input information about the vehicle, occupants, case, etc. into a sheet. The user should then be able to send this data from the 
+      scene to the cloud with the simple push of a button. In order to test the system either the cloud should be analyzed to ensure it 
+      now contains this information. This can also be done by using the desktop application to pull down the corresponding case files and 
+      examine it to ensure all data was stored correctly and can be accesses. In other words, as long as the queries tested in the 
+      integration / function section work correctly on the test database, they should work on our cloud database as long as proper communication 
+      between the cloud, desktop, and mobile applications all work. 
+    </p>
     
+    <p> The following diagram shows how the entire system should be tested for proper execution. Note that this diagram applies to 
+      each of the queries developed in the integration / function testing section as well as potential future queries needed for mobile or 
+      desktop.
+    </p>
     
   </body>
  </html>
