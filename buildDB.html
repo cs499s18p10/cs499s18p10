@@ -14,86 +14,6 @@
     
     <p> USE MyDatabase; </p>
     
-    <h3> To build the occupant table </h3>
-    
-    <p>
-      CREATE TABLE occupant (<br>
-      id INT PRIMARY KEY NOT NULL,<br>
-      name VARCHAR(45) UNIQUE NOT NULL,<br>
-      impairment VARCHAR(45) NOT NULL,<br>
-      seatbeltUsage VARCHAR(1) NOT NULL,<br>
-      type VARCHAR(45) NOT NULL,<br>
-      phoneNumber VARCHAR(10) NOT NULL,<br>
-      DOB DATE NOT NULL,<br>
-      street VARCHAR(45) NOT NULL,<br>
-      state VARCHAR(15) NOT NULL,<br>
-      city VARCHAR(45) NOT NULL,<br>
-      zip VARCHAR(10) NOT NULL,<br>
-      VIN VARCHAR(45) NOT NULL,<br>
-      FOREIGN KEY fk(VIN) REFERENCES vehicle(VIN)<br>
-      );
-    </p>
-    
-    <h3> To build the vehicle table </h3>
-    
-    <p>
-      CREATE TABLE vehicle (<br>
-      VIN VARCHAR(45) PRIMARY KEY NOT NULL,<br>
-      model VARCHAR(45) NOT NULL,<br>
-      year VARCHAR(4) NOT NULL,<br>
-      make VARCHAR(45) NOT NULL,<br>
-      speed INT NOT NULL,<br>
-      color VARCHAR(45) NOT NULL,<br>
-      airbagDeploy VARCHAR(1) NOT NULL,<br>
-      state VARCHAR(15) NOT NULL,<br>
-      expiration DATE NOT NULL,<br>
-      number VARCHAR(15) NOT NULL,<br>
-      case VARCHAR(45) NOT NULL,<br>
-      FOREIGN KEY fk(case) REFERENCES case(name)<br>
-      );
-    </p>
-    
-    <h3> To build the case table </h3>
-    
-    <p>
-      CREATE TABLE case (<br>
-      name VARCHAR(45) PRIMARY KEY NOT NULL,<br>
-      roadConditions VARCHAR(45) NOT NULL,<br>
-      street VARCHAR(45) NOT NULL,<br>
-      city VARCHAR(45) NOT NULL,<br>
-      zip VARCHAR(10) NOT NULL,<br>
-      date DATE NOT NULL,<br>
-      time TIMESTAMP NOT NULL,<br>
-      lighting VARCHAR(45) NOT NULL,<br>
-      visibility VARCHAR(45) NOT NULL,<br>
-      temperature INT NOT NULL,<br>
-      weather VARCHAR(45) NOT NULL,<br>
-      investigator INT NOT NULL,<br>
-      group VARCHAR(45) NOT NULL,<br>
-      FOREIGN KEY fk(investigator) REFERENCES user(username),<br>
-      FOREIGN KEY fkk(group) REFERENCES workGroup(id)<br>
-      );
-    </p>
-    
-    <h3> To build the user table </h3>
-    
-    <p>
-      CREATE TABLE user (<br>
-      username VARCHAR(45) PRIMARY KEY NOT NULL,<br>
-      name VARCHAR(45) NOT NULL,<br>
-      password VARCHAR(45) NOT NULL<br>
-      );
-    </p>
-    
-    <h3> To build the workGroup table </h3>
-    
-    <p>
-      CREATE TABLE workGroup (<br>
-      id INT PRIMARY KEY NOT NULL,<br>
-      name VARCHAR(45) NOT NULL<br>
-      );
-    </p>
-      
     <h3> To build the model table </h3>
     
     <p>
@@ -126,6 +46,25 @@
       );
     </p>
     
+    <h3> To build the user table </h3>
+    
+    <p>
+      CREATE TABLE user (<br>
+      username VARCHAR(45) PRIMARY KEY NOT NULL,<br>
+      name VARCHAR(45) NOT NULL,<br>
+      password VARCHAR(45) NOT NULL<br>
+      );
+    </p>
+    
+    <h3> To build the workGroup table </h3>
+    
+    <p>
+      CREATE TABLE workGroup (<br>
+      id INT PRIMARY KEY NOT NULL,<br>
+      name VARCHAR(45) NOT NULL<br>
+      );
+    </p>
+    
     <h3> To build the userWorkGroup table </h3>
     
     <p>
@@ -134,6 +73,67 @@
       workGroupID VARCHAR(45) PRIMARY KEY NOT NULL,<br>
       FOREIGN KEY fk(username) REFERENCES user(username),<br>
       FOREIGN KEY fkk(workGroupID) REFERENCES workGroup(id)<br>
+      );
+    </p>
+    
+    <h3> To build the case table </h3>
+    
+    <p>
+      CREATE TABLE case (<br>
+      name VARCHAR(45) PRIMARY KEY NOT NULL,<br>
+      roadConditions VARCHAR(45) NOT NULL,<br>
+      street VARCHAR(45) NOT NULL,<br>
+      city VARCHAR(45) NOT NULL,<br>
+      zip VARCHAR(10) NOT NULL,<br>
+      date DATE NOT NULL,<br>
+      time TIMESTAMP NOT NULL,<br>
+      lighting VARCHAR(45) NOT NULL,<br>
+      visibility VARCHAR(45) NOT NULL,<br>
+      temperature INT NOT NULL,<br>
+      weather VARCHAR(45) NOT NULL,<br>
+      investigator INT NOT NULL,<br>
+      group VARCHAR(45) NOT NULL,<br>
+      FOREIGN KEY fk(investigator) REFERENCES user(username),<br>
+      FOREIGN KEY fkk(group) REFERENCES workGroup(id)<br>
+      );
+    </p>
+    
+    <h3> To build the vehicle table </h3>
+    
+    <p>
+      CREATE TABLE vehicle (<br>
+      VIN VARCHAR(45) PRIMARY KEY NOT NULL,<br>
+      model VARCHAR(45) NOT NULL,<br>
+      year VARCHAR(4) NOT NULL,<br>
+      make VARCHAR(45) NOT NULL,<br>
+      speed INT NOT NULL,<br>
+      color VARCHAR(45) NOT NULL,<br>
+      airbagDeploy VARCHAR(1) NOT NULL,<br>
+      state VARCHAR(15) NOT NULL,<br>
+      expiration DATE NOT NULL,<br>
+      number VARCHAR(15) NOT NULL,<br>
+      case VARCHAR(45) NOT NULL,<br>
+      FOREIGN KEY fk(case) REFERENCES case(name)<br>
+      );
+    </p>
+    
+    <h3> To build the occupant table </h3>
+    
+    <p>
+      CREATE TABLE occupant (<br>
+      id INT PRIMARY KEY NOT NULL,<br>
+      name VARCHAR(45) UNIQUE NOT NULL,<br>
+      impairment VARCHAR(45) NOT NULL,<br>
+      seatbeltUsage VARCHAR(1) NOT NULL,<br>
+      type VARCHAR(45) NOT NULL,<br>
+      phoneNumber VARCHAR(10) NOT NULL,<br>
+      DOB DATE NOT NULL,<br>
+      street VARCHAR(45) NOT NULL,<br>
+      state VARCHAR(15) NOT NULL,<br>
+      city VARCHAR(45) NOT NULL,<br>
+      zip VARCHAR(10) NOT NULL,<br>
+      VIN VARCHAR(45) NOT NULL,<br>
+      FOREIGN KEY fk(VIN) REFERENCES vehicle(VIN)<br>
       );
     </p>
     
