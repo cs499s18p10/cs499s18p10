@@ -96,7 +96,7 @@
       investigator VARCHAR(45) NOT NULL,<br>
       userGroup INT NOT NULL,<br>
       FOREIGN KEY fk(investigator) REFERENCES user(username),<br>
-      FOREIGN KEY fkk(group) REFERENCES workGroup(id)<br>
+      FOREIGN KEY fkk(userGroup) REFERENCES workGroup(id)<br>
       );
     </p>
     
