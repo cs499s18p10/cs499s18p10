@@ -43,7 +43,7 @@
       stabilityRatio VARCHAR(10) NOT NULL,<br>
       CGH VARCHAR(45) NOT NULL,<br>
       stabilityTrack VARCHAR(45) NOT NULL,<br>
-      PRIMARY KEY (make, model, startYear, endYear)<br>
+      CONSTRAINT PK_model PRIMARY KEY (make, model, startYear, endYear)<br>
       );
     </p>
     
