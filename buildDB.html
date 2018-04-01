@@ -113,7 +113,7 @@
       color VARCHAR(45) NOT NULL,<br>
       airbagDeploy VARCHAR(1) NOT NULL,<br>
       state VARCHAR(15) NOT NULL,<br>
-      expiration DATE NOT NULL,<br>
+      expiration VARCHAR(45) NOT NULL,<br>
       number VARCHAR(15) NOT NULL,<br>
       caseID VARCHAR(45) NOT NULL,<br>
       FOREIGN KEY fk(caseID) REFERENCES cases(name)<br>
@@ -130,7 +130,7 @@
       seatbeltUsage VARCHAR(1) NOT NULL,<br>
       type VARCHAR(45) NOT NULL,<br>
       phoneNumber VARCHAR(10) NOT NULL,<br>
-      DOB DATE NOT NULL,<br>
+      DOB VARCHAR(45) NOT NULL,<br>
       street VARCHAR(45) NOT NULL,<br>
       state VARCHAR(15) NOT NULL,<br>
       city VARCHAR(45) NOT NULL,<br>
