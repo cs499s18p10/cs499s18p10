@@ -17,39 +17,39 @@
     <h3> To build the occupant table </h3>
     
     <p>
-      CREATE TABLE occupant (
-      id INT PRIMARY KEY NOT NULL,
-      name VARCHAR(45) UNIQUE NOT NULL,
-      impairment VARCHAR(45) NOT NULL,
-      seatbeltUsage VARCHAR(1) NOT NULL,
-      type VARCHAR(45) NOT NULL,
-      phoneNumber VARCHAR(10) NOT NULL,
-      DOB DATE NOT NULL,
-      street VARCHAR(45) NOT NULL,
-      state VARCHAR(15) NOT NULL,
-      city VARCHAR(45) NOT NULL,
-      zip VARCHAR(10) NOT NULL,
-      VIN VARCHAR(45) NOT NULL,
-      FOREIGN KEY fk(VIN) REFERENCES vehicle(VIN)
+      CREATE TABLE occupant (<br>
+      id INT PRIMARY KEY NOT NULL,<br>
+      name VARCHAR(45) UNIQUE NOT NULL,<br>
+      impairment VARCHAR(45) NOT NULL,<br>
+      seatbeltUsage VARCHAR(1) NOT NULL,<br>
+      type VARCHAR(45) NOT NULL,<br>
+      phoneNumber VARCHAR(10) NOT NULL,<br>
+      DOB DATE NOT NULL,<br>
+      street VARCHAR(45) NOT NULL,<br>
+      state VARCHAR(15) NOT NULL,<br>
+      city VARCHAR(45) NOT NULL,<br>
+      zip VARCHAR(10) NOT NULL,<br>
+      VIN VARCHAR(45) NOT NULL,<br>
+      FOREIGN KEY fk(VIN) REFERENCES vehicle(VIN)<br>
       );
     </p>
     
     <h3> To build the vehicle table </h3>
     
     <p>
-      CREATE TABLE vehicle (
-      VIN VARCHAR(45) PRIMARY KEY NOT NULL,
-      model VARCHAR(45) NOT NULL,
-      year VARCHAR(4) NOT NULL,
-      make VARCHAR(45) NOT NULL,
-      speed INT NOT NULL,
-      color VARCHAR(45) NOT NULL,
-      airbagDeploy VARCHAR(1) NOT NULL,
-      state VARCHAR(15) NOT NULL,
-      expiration DATE NOT NULL,
-      number VARCHAR(15) NOT NULL,
-      case VARCHAR(45) NOT NULL,
-      FOREIGN KEY fk(case) REFERENCES case(name)
+      CREATE TABLE vehicle (<br>
+      VIN VARCHAR(45) PRIMARY KEY NOT NULL,<br>
+      model VARCHAR(45) NOT NULL,<br>
+      year VARCHAR(4) NOT NULL,<br>
+      make VARCHAR(45) NOT NULL,<br>
+      speed INT NOT NULL,<br>
+      color VARCHAR(45) NOT NULL,<br>
+      airbagDeploy VARCHAR(1) NOT NULL,<br>
+      state VARCHAR(15) NOT NULL,<br>
+      expiration DATE NOT NULL,<br>
+      number VARCHAR(15) NOT NULL,<br>
+      case VARCHAR(45) NOT NULL,<br>
+      FOREIGN KEY fk(case) REFERENCES case(name)<br>
       );
     </p>
     
