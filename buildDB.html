@@ -70,10 +70,11 @@
     
     <p>
       CREATE TABLE userWorkGroup (<br>
-      username VARCHAR(45) PRIMARY KEY NOT NULL,<br>
-      workGroupID VARCHAR(45) PRIMARY KEY NOT NULL,<br>
+      username VARCHAR(45) NOT NULL,<br>
+      workGroupID VARCHAR(45) NOT NULL,<br>
       FOREIGN KEY fk(username) REFERENCES user(username),<br>
-      FOREIGN KEY fkk(workGroupID) REFERENCES workGroup(id)<br>
+      FOREIGN KEY fkk(workGroupID) REFERENCES workGroup(id),<br>
+      CONSTRAINT PK_group PRIMARY KEY (username,workGroupID)<br>
       );
     </p>
     
