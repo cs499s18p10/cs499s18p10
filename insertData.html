@@ -6,149 +6,104 @@
   <body>
     <h1>MySQL Commands</h1>
     
-    <h3> To create the Database itself </h3>
-    
-    <p> CREATE DATABASE MyDatabase; </p>
-    
     <h3> To use the database </h3>
     
     <p> USE MyDatabase; </p>
     
-    <h3> To build the occupant table </h3>
+    <h3> To insert test data into the model table </h3>
     
     <p>
-      CREATE TABLE occupant (
-      id INT PRIMARY KEY NOT NULL,
-      name VARCHAR(45) UNIQUE NOT NULL,
-      impairment VARCHAR(45) NOT NULL,
-      seatbeltUsage VARCHAR(1) NOT NULL,
-      type VARCHAR(45) NOT NULL,
-      phoneNumber VARCHAR(10) NOT NULL,
-      DOB DATE NOT NULL,
-      street VARCHAR(45) NOT NULL,
-      state VARCHAR(15) NOT NULL,
-      city VARCHAR(45) NOT NULL,
-      zip VARCHAR(10) NOT NULL,
-      VIN VARCHAR(45) NOT NULL,
-      FOREIGN KEY fk(VIN) REFERENCES vehicle(VIN)
-      );
+      INSERT INTO model (make, model, startYear, endYear, frontTire, rearTire, doors, bodyStyle, driveWheels, 
+      curbHeight, weightFront, weightRear, length, width, height, wheelbase, FOH, frontTrack, rearTrack, 
+      frontBumperHeight, rearBumperHeight, groundToBaseWindsheild, stabilityRatio, CGH, stabilityTrack)
+      VALUES ('Toyota', 'Camry', '2012', '2012', '20', '20', '4', 'Normal', '4', '6', '1000', '2000', '240', '112', '90', '20', 'car', 
+      '20', '20', '16', '16', '60', '5:1', 'car', '18');
     </p>
-    
-    <h3> To build the vehicle table </h3>
     
     <p>
-      CREATE TABLE vehicle (
-      VIN VARCHAR(45) PRIMARY KEY NOT NULL,
-      model VARCHAR(45) NOT NULL,
-      year VARCHAR(4) NOT NULL,
-      make VARCHAR(45) NOT NULL,
-      speed INT NOT NULL,
-      color VARCHAR(45) NOT NULL,
-      airbagDeploy VARCHAR(1) NOT NULL,
-      state VARCHAR(15) NOT NULL,
-      expiration DATE NOT NULL,
-      number VARCHAR(15) NOT NULL,
-      case VARCHAR(45) NOT NULL,
-      FOREIGN KEY fk(case) REFERENCES case(name)
-      );
+      INSERT INTO model (make, model, startYear, endYear, frontTire, rearTire, doors, bodyStyle, driveWheels, 
+      curbHeight, weightFront, weightRear, length, width, height, wheelbase, FOH, frontTrack, rearTrack, 
+      frontBumperHeight, rearBumperHeight, groundToBaseWindsheild, stabilityRatio, CGH, stabilityTrack)
+      VALUES ('Toyota', 'Corolla', '2014', '2014', '20', '20', '4', 'Normal', '4', '6', '1500', '2500', '240', '112', '90', '20', 'car', 
+      '20', '20', '16', '16', '60', '5:1', 'car', '18');
     </p>
-    
-    <h3> To build the case table </h3>
+
+    <h3> To insert test data into the user table </h3>
     
     <p>
-      CREATE TABLE case (
-      name VARCHAR(45) PRIMARY KEY NOT NULL,
-      roadConditions VARCHAR(45) NOT NULL,
-      street VARCHAR(45) NOT NULL,
-      city VARCHAR(45) NOT NULL,
-      zip VARCHAR(10) NOT NULL,
-      date DATE NOT NULL,
-      time TIMESTAMP NOT NULL,
-      lighting VARCHAR(45) NOT NULL,
-      visibility VARCHAR(45) NOT NULL,
-      temperature INT NOT NULL,
-      weather VARCHAR(45) NOT NULL,
-      investigator INT NOT NULL,
-      group VARCHAR(45) NOT NULL,
-      FOREIGN KEY fk(investigator) REFERENCES user(username),
-      FOREIGN KEY fkk(group) REFERENCES workGroup(id)
-      );
+      INSERT INTO user (username, name, password)
+      VALUES ('headUser', 'Joe Hall', '12345');
     </p>
-    
-    <h3> To build the user table </h3>
     
     <p>
-      CREATE TABLE user (
-      username VARCHAR(45) PRIMARY KEY NOT NULL,
-      name VARCHAR(45) NOT NULL,
-      password VARCHAR(45) NOT NULL
-      );
+      INSERT INTO user (username, name, password)
+      VALUES ('secondaryUser', 'Jim Hall', '54321');
     </p>
     
-    <h3> To build the workGroup table </h3>
+    <h3> To insert test data into the workGroup table </h3>
     
     <p>
-      CREATE TABLE workGroup (
-      id INT PRIMARY KEY NOT NULL,
-      name VARCHAR(45) NOT NULL
-      );
+      INSERT INTO workGroup (id, name)
+      VALUES ('1', 'lexingtonGroup');
     </p>
-      
-    <h3> To build the model table </h3>
     
     <p>
-      CREATE TABLE model (
-      make VARCHAR(45) PRIMARY KEY NOT NULL,
-      model VARCHAR(45) PRIMARY KEY NOT NULL,
-      startYear VARCHAR(4) PRIMARY KEY NOT NULL,
-      endYear VARCHAR(4) PRIMARY KEY NOT NULL,
-      frontTire INT NOT NULL,
-      rearTire INT NOT NULL,
-      doors INT NOT NULL,
-      bodyStyle VARCHAR(45) NOT NULL,
-      driveWheels INT NOT NULL,
-      curbHeight INT NOT NULL,
-      weightFront INT NOT NULL,
-      weightRear INT NOT NULL,
-      length INT NOT NULL,
-      width INT NOT NULL,
-      height INT NOT NULL,
-      wheelbase INT NOT NULL,
-      FOH VARCHAR(45) NOT NULL,
-      frontTrack INT NOT NULL,
-      rearTrack INT NOT NULL,
-      frontBumperHeight INT NOT NULL,
-      rearBumperHeight INT NOT NULL,
-      groundToBaseWindsheild INT NOT NULL,
-      stabilityRatio VARCHAR(10) NOT NULL,
-      CGH VARCHAR(45) NOT NULL,
-      stabilityTrack VARCHAR(45) NOT NULL
-      );
+      INSERT INTO workGroup (id, name)
+      VALUES ('2', 'lousivilleGroup');
     </p>
     
-    <h3> To build the userWorkGroup table </h3>
+    <h3> To insert test data into the userWorkGroup table </h3>
     
     <p>
-      CREATE TABLE userWorkGroup (
-      username VARCHAR(45) PRIMARY KEY NOT NULL,
-      workGroupID VARCHAR(45) PRIMARY KEY NOT NULL,
-      FOREIGN KEY fk(username) REFERENCES user(username),
-      FOREIGN KEY fkk(workGroupID) REFERENCES workGroup(id)
-      );
+      INSERT INTO userWorkGroup (username, workGroupID)
+      VALUES ('Joe Hall', '1');
     </p>
-    
-    <h3> To build the reference table </h3>
     
     <p>
-      CREATE TABLE reference (
-      caseID VARCHAR(45) PRIMARY KEY NOT NULL,
-      witnessNotes VARCHAR(1000) NOT NULL,
-      personalNotes VARCHAR(1000) NOT NULL,
-      FOREIGN KEY fk(caseID) REFERENCES case(name)
-      );
+      INSERT INTO userWorkGroup (id, name)
+      VALUES ('Jim Hall', '2');
     </p>
     
+    <h3> To insert test data into the case table </h3>
     
+    <p>
+      INSERT INTO case (name, roadConditions, street, city, state, zip, date, time, lighting, visibility, 
+      temperature, weather, investigator, group)
+      VALUES ('accident', 'terrible', 'main street', 'lexington', 'kentucky', '40506', '03/25/1999',
+      '12:43', 'good', 'okay', '71', 'cloudy', 'Joe Hall', '1');
+    </p>
+    
+    <p>
+      INSERT INTO case (name, roadConditions, street, city, state, zip, date, time, lighting, visibility, 
+      temperature, weather, investigator, group)
+      VALUES ('accident1', 'terrible', '1st street', 'lexington', 'kentucky', '40506', '03/27/1999',
+      '12:40', 'good', 'okay', '65', 'cloudy', 'Jim Hall', '2');
+    </p>
+    
+    <h3> To insert test data into the vehicle table </h3>
+    
+    <p>
+      INSERT INTO vehicle (vin, model, year, make, speed, color, airbagDeploy, state, expiration, number, 
+      name)
+      VALUES ('19143671576', 'Toyota', '2012', 'Camry', '100', 'red', 'y',
+      'kentucky', '03/01/2018', 'JK3-007', 'accident');
+    </p>
+    
+    <h3> To insert test data into the occupant table </h3>
+    
+    <p>
+      INSERT INTO occupant (id, name, impairment, seatbeltUsage, type, phoneNumber, DOB, street, state, 
+      city, zip, vin)
+      VALUES ('12', 'Bob Welsh', 'none', 'y', 'seatbelt', '9991110000', '02/10/1980',
+      '12 2nd street', 'kentucky', 'lexington', '40506', '19143671576');
+    </p>
+    
+    <h3> To insert test data into the reference table </h3>
+    
+    <p>
+      INSERT INTO reference (id, witnessNotes, personalNotes)
+      VALUES ('accident1', 'car moving very fast', 'very bad accident');
+    </p>
     
   </body>
  </html>
