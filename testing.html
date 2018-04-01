@@ -17,7 +17,7 @@
       they work and pull / push the correct data.
     <p>
       
-    <p> The MySQL commands to build the database and its schema in my UK or another open-source DBMS software can be found at the following link: <a href="buildDB.html">Commands</a>
+    <p> The MySQL commands to build the database and its schema in myUK or another open-source DBMS software can be found at the following link: <a href="buildDB.html">Commands</a>
     </p>
     
     <p> After building the database and its tables you can then run the following commands to insert "test" data into the 
@@ -43,16 +43,16 @@
     <p> To do the system testing the AWS cloud relational database must be used versus the test database on myUK. This is required as 
       the overall system of our project consists of the cloud database, the mobile application, and the desktop application. To do the 
       system test the SQL queries developed in the integration / function testing portion must be coded into the mobile and desktop 
-      application backgrounds. This is required because the user will actually cause these queries to be processed by writing data to 
+      application backgrounds. This is required because the user will cause these queries to be processed by writing data to 
       the cloud from the mobile side or pulling data down from the cloud from the desktop side.
     </p>
     
     <p> To test the queries developed in the integration / function sections for the mobile application system a user must be able to 
       input information about the vehicle, occupants, case, etc. into a sheet. The user should then be able to send this data from the 
-      scene to the cloud with the simple push of a button. In order to test the system either the cloud should be analyzed to ensure it 
+      scene to the cloud with the simple push of a button. To test the system either the cloud should be analyzed to ensure it 
       now contains this information. This can also be done by using the desktop application to pull down the corresponding case files and 
-      examine it to ensure all data was stored correctly and can be accesses. In other words, as long as the queries tested in the 
-      integration / function section work correctly on the test database, they should work on our cloud database as long as proper communication 
+      examine it to ensure all data was stored correctly and can be accesses. In other words, if the queries tested in the 
+      integration / function section work correctly on the test database, they should work on our cloud database if proper communication 
       between the cloud, desktop, and mobile applications all work. 
     </p>
     
@@ -65,8 +65,8 @@
     
     <p> In other words, to system test our queries from the integration / function testing section should be built in to the mobile and 
       desktop applications. These applications can then be used to send and retrieve information from the cloud database. 
-      If mobile can send data to the database and desktop can then pull that data down into the CAD program then our system should work 
-      correctly as the queries themselves have already been tested in the integration / function testing section. So basically, this high level 
+      If mobile can send data to the database and desktop can then pull that data down into the CAD program, then our system should work 
+      correctly as the queries themselves have already been tested in the integration / function testing section. So basically, this level 
       of testing is ensuring communication works and that data can be transmitted accurately between mobile, the cloud, and desktop. 
     </p>
     
