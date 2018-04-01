@@ -10,7 +10,64 @@
     
     <p> USE MyDatabase; </p>
     
+    <h3> The following basic queries can be used to ensure the tables / schemas are set up correctly 
+      and that the test data has been inserted into them </h3>
     
+    <p>
+    SELECT * 
+    FROM occupant;
+    </p>
+    
+    <p>
+    SELECT * 
+    FROM vehicle;
+    </p>
+    
+    <p>
+    SELECT * 
+    FROM case;
+    </p>
+    
+    <p>
+    SELECT * 
+    FROM user;
+    </p>
+    
+    <p>
+    SELECT * 
+    FROM workGroup;
+    </p>
+    
+    <p>
+    SELECT * 
+    FROM model;
+    </p>
+    
+    <p>
+    SELECT * 
+    FROM userWorkGroup;
+    </p>
+    
+    <p>
+    SELECT * 
+    FROM reference;
+    </p>
+    
+    <h3> To get the names of all individuals involved in accidents who did not wear a seatbelt</h3>
+    
+    <p>
+    SELECT name 
+    FROM occupant
+    WHERE seatbeltUsage = 'n';
+    </p>
+    
+    <h3> To get the count of Toyota vehicles involved in accidents</h3>
+    
+    <p>
+    SELECT COUNT(vin) 
+    FROM vehicle
+    WHERE model = 'toyota';
+    </p>
     
   </body>
  </html>
