@@ -18,10 +18,10 @@
     
     <p>
       CREATE TABLE model (<br>
-      make VARCHAR(45) PRIMARY KEY NOT NULL,<br>
-      model VARCHAR(45) PRIMARY KEY NOT NULL,<br>
-      startYear VARCHAR(4) PRIMARY KEY NOT NULL,<br>
-      endYear VARCHAR(4) PRIMARY KEY NOT NULL,<br>
+      make VARCHAR(45) NOT NULL,<br>
+      model VARCHAR(45) NULL,<br>
+      startYear VARCHAR(4) NOT NULL,<br>
+      endYear VARCHAR(4) NOT NULL,<br>
       frontTire INT NOT NULL,<br>
       rearTire INT NOT NULL,<br>
       doors INT NOT NULL,<br>
@@ -42,7 +42,8 @@
       groundToBaseWindsheild INT NOT NULL,<br>
       stabilityRatio VARCHAR(10) NOT NULL,<br>
       CGH VARCHAR(45) NOT NULL,<br>
-      stabilityTrack VARCHAR(45) NOT NULL<br>
+      stabilityTrack VARCHAR(45) NOT NULL,<br>
+      PRIMARY KEY (make, model, startYear, endYear)<br>
       );
     </p>
     
