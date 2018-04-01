@@ -94,7 +94,7 @@
       temperature INT NOT NULL,<br>
       weather VARCHAR(45) NOT NULL,<br>
       investigator VARCHAR(45) NOT NULL,<br>
-      group INT NOT NULL,<br>
+      userGroup INT NOT NULL,<br>
       FOREIGN KEY fk(investigator) REFERENCES user(username),<br>
       FOREIGN KEY fkk(group) REFERENCES workGroup(id)<br>
       );
@@ -114,8 +114,8 @@
       state VARCHAR(15) NOT NULL,<br>
       expiration DATE NOT NULL,<br>
       number VARCHAR(15) NOT NULL,<br>
-      case VARCHAR(45) NOT NULL,<br>
-      FOREIGN KEY fk(case) REFERENCES case(name)<br>
+      caseID VARCHAR(45) NOT NULL,<br>
+      FOREIGN KEY fk(caseID) REFERENCES cases(name)<br>
       );
     </p>
     
@@ -146,7 +146,7 @@
       caseID VARCHAR(45) PRIMARY KEY NOT NULL,<br>
       witnessNotes VARCHAR(1000) NOT NULL,<br>
       personalNotes VARCHAR(1000) NOT NULL,<br>
-      FOREIGN KEY fk(caseID) REFERENCES case(name)<br>
+      FOREIGN KEY fk(caseID) REFERENCES cases(name)<br>
       );
     </p>
     
