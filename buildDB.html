@@ -56,95 +56,95 @@
     <h3> To build the case table </h3>
     
     <p>
-      CREATE TABLE case (
-      name VARCHAR(45) PRIMARY KEY NOT NULL,
-      roadConditions VARCHAR(45) NOT NULL,
-      street VARCHAR(45) NOT NULL,
-      city VARCHAR(45) NOT NULL,
-      zip VARCHAR(10) NOT NULL,
-      date DATE NOT NULL,
-      time TIMESTAMP NOT NULL,
-      lighting VARCHAR(45) NOT NULL,
-      visibility VARCHAR(45) NOT NULL,
-      temperature INT NOT NULL,
-      weather VARCHAR(45) NOT NULL,
-      investigator INT NOT NULL,
-      group VARCHAR(45) NOT NULL,
-      FOREIGN KEY fk(investigator) REFERENCES user(username),
-      FOREIGN KEY fkk(group) REFERENCES workGroup(id)
+      CREATE TABLE case (<br>
+      name VARCHAR(45) PRIMARY KEY NOT NULL,<br>
+      roadConditions VARCHAR(45) NOT NULL,<br>
+      street VARCHAR(45) NOT NULL,<br>
+      city VARCHAR(45) NOT NULL,<br>
+      zip VARCHAR(10) NOT NULL,<br>
+      date DATE NOT NULL,<br>
+      time TIMESTAMP NOT NULL,<br>
+      lighting VARCHAR(45) NOT NULL,<br>
+      visibility VARCHAR(45) NOT NULL,<br>
+      temperature INT NOT NULL,<br>
+      weather VARCHAR(45) NOT NULL,<br>
+      investigator INT NOT NULL,<br>
+      group VARCHAR(45) NOT NULL,<br>
+      FOREIGN KEY fk(investigator) REFERENCES user(username),<br>
+      FOREIGN KEY fkk(group) REFERENCES workGroup(id)<br>
       );
     </p>
     
     <h3> To build the user table </h3>
     
     <p>
-      CREATE TABLE user (
-      username VARCHAR(45) PRIMARY KEY NOT NULL,
-      name VARCHAR(45) NOT NULL,
-      password VARCHAR(45) NOT NULL
+      CREATE TABLE user (<br>
+      username VARCHAR(45) PRIMARY KEY NOT NULL,<br>
+      name VARCHAR(45) NOT NULL,<br>
+      password VARCHAR(45) NOT NULL<br>
       );
     </p>
     
     <h3> To build the workGroup table </h3>
     
     <p>
-      CREATE TABLE workGroup (
-      id INT PRIMARY KEY NOT NULL,
-      name VARCHAR(45) NOT NULL
+      CREATE TABLE workGroup (<br>
+      id INT PRIMARY KEY NOT NULL,<br>
+      name VARCHAR(45) NOT NULL<br>
       );
     </p>
       
     <h3> To build the model table </h3>
     
     <p>
-      CREATE TABLE model (
-      make VARCHAR(45) PRIMARY KEY NOT NULL,
-      model VARCHAR(45) PRIMARY KEY NOT NULL,
-      startYear VARCHAR(4) PRIMARY KEY NOT NULL,
-      endYear VARCHAR(4) PRIMARY KEY NOT NULL,
-      frontTire INT NOT NULL,
-      rearTire INT NOT NULL,
-      doors INT NOT NULL,
-      bodyStyle VARCHAR(45) NOT NULL,
-      driveWheels INT NOT NULL,
-      curbHeight INT NOT NULL,
-      weightFront INT NOT NULL,
-      weightRear INT NOT NULL,
-      length INT NOT NULL,
-      width INT NOT NULL,
-      height INT NOT NULL,
-      wheelbase INT NOT NULL,
-      FOH VARCHAR(45) NOT NULL,
-      frontTrack INT NOT NULL,
-      rearTrack INT NOT NULL,
-      frontBumperHeight INT NOT NULL,
-      rearBumperHeight INT NOT NULL,
-      groundToBaseWindsheild INT NOT NULL,
-      stabilityRatio VARCHAR(10) NOT NULL,
-      CGH VARCHAR(45) NOT NULL,
-      stabilityTrack VARCHAR(45) NOT NULL
+      CREATE TABLE model (<br>
+      make VARCHAR(45) PRIMARY KEY NOT NULL,<br>
+      model VARCHAR(45) PRIMARY KEY NOT NULL,<br>
+      startYear VARCHAR(4) PRIMARY KEY NOT NULL,<br>
+      endYear VARCHAR(4) PRIMARY KEY NOT NULL,<br>
+      frontTire INT NOT NULL,<br>
+      rearTire INT NOT NULL,<br>
+      doors INT NOT NULL,<br>
+      bodyStyle VARCHAR(45) NOT NULL,<br>
+      driveWheels INT NOT NULL,<br>
+      curbHeight INT NOT NULL,<br>
+      weightFront INT NOT NULL,<br>
+      weightRear INT NOT NULL,<br>
+      length INT NOT NULL,<br>
+      width INT NOT NULL,<br>
+      height INT NOT NULL,<br>
+      wheelbase INT NOT NULL,<br>
+      FOH VARCHAR(45) NOT NULL,<br>
+      frontTrack INT NOT NULL,<br>
+      rearTrack INT NOT NULL,<br>
+      frontBumperHeight INT NOT NULL,<br>
+      rearBumperHeight INT NOT NULL,<br>
+      groundToBaseWindsheild INT NOT NULL,<br>
+      stabilityRatio VARCHAR(10) NOT NULL,<br>
+      CGH VARCHAR(45) NOT NULL,<br>
+      stabilityTrack VARCHAR(45) NOT NULL<br>
       );
     </p>
     
     <h3> To build the userWorkGroup table </h3>
     
     <p>
-      CREATE TABLE userWorkGroup (
-      username VARCHAR(45) PRIMARY KEY NOT NULL,
-      workGroupID VARCHAR(45) PRIMARY KEY NOT NULL,
-      FOREIGN KEY fk(username) REFERENCES user(username),
-      FOREIGN KEY fkk(workGroupID) REFERENCES workGroup(id)
+      CREATE TABLE userWorkGroup (<br>
+      username VARCHAR(45) PRIMARY KEY NOT NULL,<br>
+      workGroupID VARCHAR(45) PRIMARY KEY NOT NULL,<br>
+      FOREIGN KEY fk(username) REFERENCES user(username),<br>
+      FOREIGN KEY fkk(workGroupID) REFERENCES workGroup(id)<br>
       );
     </p>
     
     <h3> To build the reference table </h3>
     
     <p>
-      CREATE TABLE reference (
-      caseID VARCHAR(45) PRIMARY KEY NOT NULL,
-      witnessNotes VARCHAR(1000) NOT NULL,
-      personalNotes VARCHAR(1000) NOT NULL,
-      FOREIGN KEY fk(caseID) REFERENCES case(name)
+      CREATE TABLE reference (<br>
+      caseID VARCHAR(45) PRIMARY KEY NOT NULL,<br>
+      witnessNotes VARCHAR(1000) NOT NULL,<br>
+      personalNotes VARCHAR(1000) NOT NULL,<br>
+      FOREIGN KEY fk(caseID) REFERENCES case(name)<br>
       );
     </p>
     
