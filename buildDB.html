@@ -93,8 +93,8 @@
       visibility VARCHAR(45) NOT NULL,<br>
       temperature INT NOT NULL,<br>
       weather VARCHAR(45) NOT NULL,<br>
-      investigator INT NOT NULL,<br>
-      group VARCHAR(45) NOT NULL,<br>
+      investigator VARCHAR(45) NOT NULL,<br>
+      group INT NOT NULL,<br>
       FOREIGN KEY fk(investigator) REFERENCES user(username),<br>
       FOREIGN KEY fkk(group) REFERENCES workGroup(id)<br>
       );
