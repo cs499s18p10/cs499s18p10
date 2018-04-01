@@ -15,7 +15,7 @@
     <p>
       INSERT INTO model (make, model, startYear, endYear, frontTire, rearTire, doors, bodyStyle, driveWheels, 
       curbHeight, weightFront, weightRear, length, width, height, wheelbase, FOH, frontTrack, rearTrack, 
-      frontBumperHeight, rearBumperHeight, groundToBaseWindsheild, stabilityRatio, CGH, stabilityTrack)
+      frontBumperHeight, rearBumperHeight, groundToBaseWindsheild, stabilityRatio, CGH, stabilityTrack)<br>
       VALUES ('Toyota', 'Camry', '2012', '2012', '20', '20', '4', 'Normal', '4', '6', '1000', '2000', '240', '112', '90', '20', 'car', 
       '20', '20', '16', '16', '60', '5:1', 'car', '18');
     </p>
@@ -23,7 +23,7 @@
     <p>
       INSERT INTO model (make, model, startYear, endYear, frontTire, rearTire, doors, bodyStyle, driveWheels, 
       curbHeight, weightFront, weightRear, length, width, height, wheelbase, FOH, frontTrack, rearTrack, 
-      frontBumperHeight, rearBumperHeight, groundToBaseWindsheild, stabilityRatio, CGH, stabilityTrack)
+      frontBumperHeight, rearBumperHeight, groundToBaseWindsheild, stabilityRatio, CGH, stabilityTrack) <br>
       VALUES ('Toyota', 'Corolla', '2014', '2014', '20', '20', '4', 'Normal', '4', '6', '1500', '2500', '240', '112', '90', '20', 'car', 
       '20', '20', '16', '16', '60', '5:1', 'car', '18');
     </p>
@@ -31,36 +31,36 @@
     <h3> To insert test data into the user table </h3>
     
     <p>
-      INSERT INTO user (username, name, password)
+      INSERT INTO user (username, name, password) <br>
       VALUES ('headUser', 'Joe Hall', '12345');
     </p>
     
     <p>
-      INSERT INTO user (username, name, password)
+      INSERT INTO user (username, name, password) <br>
       VALUES ('secondaryUser', 'Jim Hall', '54321');
     </p>
     
     <h3> To insert test data into the workGroup table </h3>
     
     <p>
-      INSERT INTO workGroup (id, name)
+      INSERT INTO workGroup (id, name) <br>
       VALUES ('1', 'lexingtonGroup');
     </p>
     
     <p>
-      INSERT INTO workGroup (id, name)
+      INSERT INTO workGroup (id, name) <br>
       VALUES ('2', 'lousivilleGroup');
     </p>
     
     <h3> To insert test data into the userWorkGroup table </h3>
     
     <p>
-      INSERT INTO userWorkGroup (username, workGroupID)
+      INSERT INTO userWorkGroup (username, workGroupID) <br>
       VALUES ('Joe Hall', '1');
     </p>
     
     <p>
-      INSERT INTO userWorkGroup (id, name)
+      INSERT INTO userWorkGroup (id, name) <br>
       VALUES ('Jim Hall', '2');
     </p>
     
@@ -68,14 +68,14 @@
     
     <p>
       INSERT INTO case (name, roadConditions, street, city, state, zip, date, time, lighting, visibility, 
-      temperature, weather, investigator, group)
+      temperature, weather, investigator, group) <br>
       VALUES ('accident', 'terrible', 'main street', 'lexington', 'kentucky', '40506', '03/25/1999',
       '12:43', 'good', 'okay', '71', 'cloudy', 'Joe Hall', '1');
     </p>
     
     <p>
       INSERT INTO case (name, roadConditions, street, city, state, zip, date, time, lighting, visibility, 
-      temperature, weather, investigator, group)
+      temperature, weather, investigator, group) <br>
       VALUES ('accident1', 'terrible', '1st street', 'lexington', 'kentucky', '40506', '03/27/1999',
       '12:40', 'good', 'okay', '65', 'cloudy', 'Jim Hall', '2');
     </p>
@@ -84,7 +84,7 @@
     
     <p>
       INSERT INTO vehicle (vin, model, year, make, speed, color, airbagDeploy, state, expiration, number, 
-      name)
+      name) <br>
       VALUES ('19143671576', 'Toyota', '2012', 'Camry', '100', 'red', 'y',
       'kentucky', '03/01/2018', 'JK3-007', 'accident');
     </p>
@@ -93,7 +93,7 @@
     
     <p>
       INSERT INTO occupant (id, name, impairment, seatbeltUsage, type, phoneNumber, DOB, street, state, 
-      city, zip, vin)
+      city, zip, vin) <br>
       VALUES ('12', 'Bob Welsh', 'none', 'y', 'seatbelt', '9991110000', '02/10/1980',
       '12 2nd street', 'kentucky', 'lexington', '40506', '19143671576');
     </p>
@@ -101,7 +101,7 @@
     <h3> To insert test data into the reference table </h3>
     
     <p>
-      INSERT INTO reference (id, witnessNotes, personalNotes)
+      INSERT INTO reference (id, witnessNotes, personalNotes) <br>
       VALUES ('accident1', 'car moving very fast', 'very bad accident');
     </p>
     
