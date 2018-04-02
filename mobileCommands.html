@@ -1,1 +1,78 @@
-hello
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <h1>Mobile Application SQL Commands</h1>
+    
+    <h3> To use the database </h3>
+    
+    <p> USE MyDatabase; </p>
+    
+    <h3> To insert a new case into the "cases" table </h3>
+    
+    <p>
+      The mobile app is setup to allow users to enter case information into the app. Users can then send that information up to the cloud
+      after inputting all case data. The investigator name as well as user group will not be entered in on an app screen as this data 
+      will be stored internally on the app based on who is logged in.
+    </p>
+    
+    <p>
+    INSERT INTO cases (name, roadConditions, street, city, state, zip, date, time, lighting, visibility, 
+    temperature, weather, investigator, userGroup) <br>
+    VALUES ('case name', 'road condition', 'street', 'city', 'state', 'zip', 'date',
+    'time', 'lighting', 'visibility', 'temperature', 'weather', 'investigator', 1);
+    </p>
+    
+    <h3> To insert a new vehicle into the "vehicle" table </h3>
+    
+    <p>
+      The mobile app will also allow users to enter in vehicle information involved in accidents. Users can send that information up to 
+      the cloud by completing the form on the app and inputting all vehicle information. The case ID will not be entered in on an app 
+      screen as this data will be linked directly to the case the vehicle is involved in. Therefore, the app will be setup in a way that 
+      investigators arrive at the scene and first input the case data into the app before being taken to a screen that allows them to input 
+      the vehicle information.
+    </p>
+    
+    <p>
+      INSERT INTO vehicle (vin, model, year, make, speed, color, airbagDeploy, state, expiration, number, 
+      caseID) <br>
+      VALUES ('vin number', 'model', 'year', 'make', 'speed at time of accident', 'color', 'did the airbag deploy (y/n)',
+      'state (license plate)', 'expiration (license plate)', 'number (license plate)', 'case ID');
+    </p>
+    
+    <h3> To insert a new occupant into the "occupant" table </h3>
+    
+    <p>
+      The mobile app will allow users to enter in occupant information involved in accidents. Users can send that information up to 
+      the cloud by completing the form on the app and inputting all required information. The id will not be entered in on an app 
+      screen as this data will be determined by the database itself (as new occupants are added to the table their id will be incremented 
+      1 higher than the last occupant added). The vin number will also not be input as it will be linked directly to the vehicle 
+      the occupant was in. Therefore, the app will be setup in a way that investigators input the vehicle data into the app before 
+      the occupant data.
+    </p>
+    
+    <p>
+      INSERT INTO occupant (id, name, impairment, seatbeltUsage, type, phoneNumber, DOB, street, state, 
+      city, zip, vin) <br>
+      VALUES ('id', 'name', 'impairment', 'seatbel usage (y/n)', 'type', 'phone number', 'date of birth',
+      'street (live on)', 'state (live in)', 'city (live in)', 'zip (live in)', 'vin number of the car in');
+    </p>
+    
+    <h3> To insert a new reference into the "reference" table </h3>
+    
+    <p>
+      The mobile app will allow investigators to enter in reference information for accidents. Users can send that information up to 
+      the cloud by completing the form on the app and inputting all required information. The case id will not be entered in on an app 
+      screen as this data will be linked to specific scene this investigator is documenting. Therefore, the app will be setup in a way 
+      that investigators input the case data before being taken to a screen to input the reference data.
+    </p>
+    
+    <p>
+      INSERT INTO reference (caseID, witnessNotes, personalNotes) <br>
+      VALUES ('case ID', 'witness notes', 'personal investigator notes');
+    </p>
+    
+  </body>
+ </html>
