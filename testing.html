@@ -44,7 +44,23 @@
     
     <h3> Integration / Function Testing </h3>
     
-    <p> Info...
+    <p> To function test the database we developed the higher-level SQL commands needed by both the mobile and desktop applications 
+      to interact with and send / receive data from the cloud. We again tested these commands directly on our "test" database built with 
+      either myUK or an open-source relational database software. This allowed our team to build the queries needed by mobile and desktop 
+      independent of these systems and their progress. By doing this our team can ensure the queries themselves work properly, 
+      have the correct syntax, and process the necessary data. Then, when mobile and desktop are ready to add these queries to the back-end
+      of their applications, we can confidently hand them off knowing that their execution should be sound if communication works properly.
+    </p>
+    
+    <p> Therefore, as mentioned above, these queries can be tested directly on the non-cloud relational database developed in the 
+      unit testing portion of this page.
+    </p>
+    
+    <p> The SQL queries / commands primarily used by the mobile application involve sending data to the cloud and storing that information
+      there. Mobile is currently set up in a way that it doesn't retrieve any data from the cloud except for the independent car 
+      spec database. The following are some commands used by mobile to send data to the cloud and have that information stored there 
+      (note that more commands will most likely be developed in the future as the mobile team progresses and seeks to expand their 
+      application's capabilities): <a href="mobileCommands.html">Mobile Commands</a>
     </p>
     
     <h3> System Testing </h3>
