@@ -10,6 +10,33 @@
     
     <p> USE MyDatabase; </p>
     
+    <h3>To get specific car makes, and models from the database </h3>
+    
+    <p>
+      SELECT DISTINCT model make <br>
+      FROM vehicle <br>
+      ORDER BY model;
+    </p>
+    
+    <h3>To get specific car models that are a certain make from the database </h3>
+    
+    <p>
+      SELECT DISTINCT model <br>
+      FROM vehicle <br>
+      WHEREA (model = "Toyota") <br>
+      ORDER BY model;
+    </p>
+    
+    <h3>To get specific years a car make and model was produced from the database </h3>
+    
+    <p>
+      SELECT DISTINCT startYear <br>
+      FROM vehicle <br>
+      WHERE (make = "Toyota" <br>
+      AND model = "Camry") <br>
+      ORDER BY startYear;
+    </p>
+    
     
     
   </body>
