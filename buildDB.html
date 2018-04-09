@@ -14,143 +14,160 @@
     
     <p> USE MyDatabase; </p>
     
-    <h3> To build the model table </h3>
+    <h3> To build the model specs table </h3>
     
     <p>
-      CREATE TABLE model (<br>
-      make VARCHAR(45) NOT NULL,<br>
-      model VARCHAR(45) NOT NULL,<br>
-      startYear VARCHAR(4) NOT NULL,<br>
-      endYear VARCHAR(4) NOT NULL,<br>
-      frontTire INT NOT NULL,<br>
-      rearTire INT NOT NULL,<br>
-      doors INT NOT NULL,<br>
-      bodyStyle VARCHAR(45) NOT NULL,<br>
-      driveWheels INT NOT NULL,<br>
-      curbHeight INT NOT NULL,<br>
-      weightFront INT NOT NULL,<br>
-      weightRear INT NOT NULL,<br>
-      length INT NOT NULL,<br>
-      width INT NOT NULL,<br>
-      height INT NOT NULL,<br>
-      wheelbase INT NOT NULL,<br>
-      FOH VARCHAR(45) NOT NULL,<br>
-      frontTrack INT NOT NULL,<br>
-      rearTrack INT NOT NULL,<br>
-      frontBumperHeight INT NOT NULL,<br>
-      rearBumperHeight INT NOT NULL,<br>
-      groundToBaseWindsheild INT NOT NULL,<br>
-      stabilityRatio VARCHAR(10) NOT NULL,<br>
-      CGH VARCHAR(45) NOT NULL,<br>
-      stabilityTrack VARCHAR(45) NOT NULL,<br>
-      CONSTRAINT PK_model PRIMARY KEY (make, model, startYear, endYear)<br>
-      );
+      CREATE TABLE MODEL_SPECS (<br>
+model_make_ID VARCHAR(45) NOT NULL,<br>
+model_name VARCHAR(45) NOT NULL,<br>
+model_trim VARCHAR(45) NOT NULL,<br>
+model_year VARCHAR(45) NOT NULL,<br>
+model_body VARCHAR(45) NOT NULL,<br>
+model_engine_position VARCHAR(45) NOT NULL,<br>
+model_engine_cc VARCHAR(45) NOT NULL,<br>
+model_engine_cyl VARCHAR(45) NOT NULL,<br>
+model_engine_type VARCHAR(45) NOT NULL,<br>
+model_engine_valves_per_cyl VARCHAR(45) NOT NULL,<br>
+model_engine_power_ps VARCHAR(45) NOT NULL,<br>
+model_engine_power_rpm VARCHAR(45) NOT NULL,<br>
+model_engine_torque_nm VARCHAR(45) NOT NULL,<br>
+model_engine_torque_rpm VARCHAR(45) NOT NULL,<br>
+model_engine_bore_mm VARCHAR(45) NOT NULL,<br>
+model_engine_stoke_mm VARCHAR(45) NOT NULL,<br>
+model_engine_compression VARCHAR(45) NOT NULL,<br>
+model_engine_fuel VARCHAR(45) NOT NULL,<br>
+model_top_speed_kph VARCHAR(45) NOT NULL,<br>
+model_0_to_100_kph VARCHAR(45) NOT NULL,<br>
+model_drive VARCHAR(45) NOT NULL,<br>
+model_transmission_type VARCHAR(45) NOT NULL,<br>
+model_seats VARCHAR(45) NOT NULL,<br>
+model_doors VARCHAR(45) NOT NULL,<br>
+model_weight_kg VARCHAR(45) NOT NULL,<br>
+model_length_mm VARCHAR(45) NOT NULL,<br>
+model_width_mm VARCHAR(45) NOT NULL,<br>
+model_height_mm VARCHAR(45) NOT NULL,<br>
+model_wheelbase_mm VARCHAR(45) NOT NULL,<br>
+model_lkm_hwy VARCHAR(45) NOT NULL,<br>
+model_lkm_mixed VARCHAR(45) NOT NULL,<br>
+model_lkm_city VARCHAR(45) NOT NULL,<br>
+model_fuel_cap_I VARCHAR(45) NOT NULL,<br>
+model_sold_in_us VARCHAR(45) NOT NULL,<br>
+model_co2 VARCHAR(45) NOT NULL,<br>
+model_make_display VARCHAR(45) NOT NULL,<br>
+CONSTRAINT PK_model PRIMARY KEY (model_make_id, model_name, model_year)<br>
+);
     </p>
     
     <h3> To build the user table </h3>
     
     <p>
-      CREATE TABLE user (<br>
-      username VARCHAR(45) PRIMARY KEY NOT NULL,<br>
-      name VARCHAR(45) NOT NULL,<br>
-      password VARCHAR(45) NOT NULL<br>
-      );
+      CREATE TABLE USERS (<br>
+Username VARCHAR(45) PRIMARY KEY NOT NULL,<br>
+Name VARCHAR(45) NOT NULL,<br>
+Password VARCHAR(45) NOT NULL,<br>
+Project_Name VARCHAR(45) NOT NULL<br>
+);
     </p>
     
     <h3> To build the workGroup table </h3>
     
     <p>
-      CREATE TABLE workGroup (<br>
-      id INT PRIMARY KEY NOT NULL,<br>
-      name VARCHAR(45) NOT NULL<br>
-      );
+      CREATE TABLE WORKGROUPS (<br>
+ID INT PRIMARY KEY NOT NULL,<br>
+Name VARCHAR(45) NOT NULL<br>
+);
     </p>
     
     <h3> To build the userWorkGroup table </h3>
     
     <p>
-      CREATE TABLE userWorkGroup (<br>
-      username VARCHAR(45) NOT NULL,<br>
-      workGroupID INT NOT NULL,<br>
-      FOREIGN KEY fk(username) REFERENCES user(username),<br>
-      FOREIGN KEY fkk(workGroupID) REFERENCES workGroup(id),<br>
-      CONSTRAINT PK_group PRIMARY KEY (username,workGroupID)<br>
-      );
+      CREATE TABLE USER_WORKGROUP (<br>
+Username VARCHAR(45) NOT NULL,<br>
+WGID INT NOT NULL,<br>
+FOREIGN KEY fk(Username) REFERENCES USERS(Username),<br>
+FOREIGN KEY fkk(WGID) REFERENCES WORKGROUPS(ID),<br>
+CONSTRAINT PK_group PRIMARY KEY (Username,WGID)<br>
+);
     </p>
     
     <h3> To build the cases table </h3>
     
     <p>
-      CREATE TABLE cases (<br>
-      name VARCHAR(45) PRIMARY KEY NOT NULL,<br>
-      roadConditions VARCHAR(45) NOT NULL,<br>
-      street VARCHAR(45) NOT NULL,<br>
-      city VARCHAR(45) NOT NULL,<br>
-      state VARCHAR(45) NOT NULL,<br>
-      zip VARCHAR(10) NOT NULL,<br>
-      date VARCHAR(45) NOT NULL,<br>
-      time VARCHAR(45) NOT NULL,<br>
-      lighting VARCHAR(45) NOT NULL,<br>
-      visibility VARCHAR(45) NOT NULL,<br>
-      temperature INT NOT NULL,<br>
-      weather VARCHAR(45) NOT NULL,<br>
-      investigator VARCHAR(45) NOT NULL,<br>
-      userGroup INT NOT NULL,<br>
-      FOREIGN KEY fk(investigator) REFERENCES user(username),<br>
-      FOREIGN KEY fkk(userGroup) REFERENCES workGroup(id)<br>
-      );
+      CREATE TABLE CASES (<br>
+Case_Number INT PRIMARY KEY NOT NULL,<br>
+Street VARCHAR(45) NOT NULL,<br>
+City VARCHAR(45) NOT NULL,<br>
+State VARCHAR(45) NOT NULL,<br>
+Zip VARCHAR(10) NOT NULL,<br>
+Date_Of_Accident VARCHAR(45) NOT NULL,<br>
+Time VARCHAR(45) NOT NULL,<br>
+Lead_Investigator VARCHAR(45) NOT NULL,<br>
+WGID INT NOT NULL,<br>
+Creator_ID VARCHAR(45) NOT NULL,<br>
+FOREIGN KEY fk(Lead_Investigator) REFERENCES USERS(Username),<br>
+FOREIGN KEY fkk(WGID) REFERENCES WORKGROUPS(ID),<br>
+FOREIGN KEY fkkk(Creator_ID) REFERENCES USERS(Username)<br>
+);
     </p>
     
     <h3> To build the vehicle table </h3>
     
     <p>
-      CREATE TABLE vehicle (<br>
-      VIN VARCHAR(45) PRIMARY KEY NOT NULL,<br>
-      model VARCHAR(45) NOT NULL,<br>
-      year VARCHAR(4) NOT NULL,<br>
-      make VARCHAR(45) NOT NULL,<br>
-      speed INT NOT NULL,<br>
-      color VARCHAR(45) NOT NULL,<br>
-      airbagDeploy VARCHAR(1) NOT NULL,<br>
-      state VARCHAR(15) NOT NULL,<br>
-      expiration VARCHAR(45) NOT NULL,<br>
-      number VARCHAR(15) NOT NULL,<br>
-      caseID VARCHAR(45) NOT NULL,<br>
-      FOREIGN KEY fk(caseID) REFERENCES cases(name)<br>
-      );
+      CREATE TABLE VEHICLE (<br>
+VIN VARCHAR(45) PRIMARY KEY NOT NULL,<br>
+Case_Number INT NOT NULL,<br>
+License_Plate_Number VARCHAR(10) NOT NULL,<br>
+Make VARCHAR(45) NOT NULL,<br>
+Model VARCHAR(45) NOT NULL,<br>
+Year VARCHAR(4) NOT NULL,<br>
+Speed INT NOT NULL,<br>
+Airbag_Deploy VARCHAR(1) NOT NULL,<br>
+Color VARCHAR(45) NOT NULL,<br>
+License_Plate_Expiration VARCHAR(45) NOT NULL,<br>
+License_Plate_State VARCHAR(15) NOT NULL,<br>
+FOREIGN KEY fk(Case_Number) REFERENCES CASES(Case_Number)<br>
+);
     </p>
     
     <h3> To build the occupant table </h3>
     
     <p>
-      CREATE TABLE occupant (<br>
-      id INT PRIMARY KEY NOT NULL,<br>
-      name VARCHAR(45) UNIQUE NOT NULL,<br>
-      impairment VARCHAR(45) NOT NULL,<br>
-      seatbeltUsage VARCHAR(1) NOT NULL,<br>
-      type VARCHAR(45) NOT NULL,<br>
-      phoneNumber VARCHAR(10) NOT NULL,<br>
-      DOB VARCHAR(45) NOT NULL,<br>
-      street VARCHAR(45) NOT NULL,<br>
-      state VARCHAR(15) NOT NULL,<br>
-      city VARCHAR(45) NOT NULL,<br>
-      zip VARCHAR(10) NOT NULL,<br>
-      VIN VARCHAR(45) NOT NULL,<br>
-      FOREIGN KEY fk(VIN) REFERENCES vehicle(VIN)<br>
-      );
+     CREATE TABLE OCCUPANT_INFO (<br>
+ID INT PRIMARY KEY NOT NULL,<br>
+Name VARCHAR(45) UNIQUE NOT NULL,<br>
+Impairment VARCHAR(45) NOT NULL,<br>
+Seatbelt VARCHAR(1) NOT NULL,<br>
+Phone_No VARCHAR(10) NOT NULL,<br>
+DOB VARCHAR(45) NOT NULL,<br>
+Driving VARCHAR(45) NOT NULL,<br>
+FOREIGN KEY fk(Driving) REFERENCES VEHICLE(VIN)<br>
+);
     </p>
     
     <h3> To build the reference table </h3>
     
     <p>
-      CREATE TABLE reference (<br>
-      caseID VARCHAR(45) PRIMARY KEY NOT NULL,<br>
-      witnessNotes VARCHAR(1000) NOT NULL,<br>
-      personalNotes VARCHAR(1000) NOT NULL,<br>
-      FOREIGN KEY fk(caseID) REFERENCES cases(name)<br>
-      );
+      CREATE TABLE REFERENCE (<br>
+Case_ID INT PRIMARY KEY NOT NULL,<br>
+Witness_Notes VARCHAR(1000) NOT NULL,<br>
+Personal_Notes VARCHAR(1000) NOT NULL,<br>
+FOREIGN KEY fk(Case_ID) REFERENCES CASES(Case_Number)<br>
+);
     </p>
     
+    <h3> To build the environment table </h3>
+    
+    <p>
+      CREATE TABLE ENVIRONMENT (<br>
+Case_Number INT PRIMARY KEY NOT NULL,<br>
+Precipitation VARCHAR(100) NOT NULL,<br>
+Lighting VARCHAR(100) NOT NULL,<br>
+Temperature VARCHAR(100) NOT NULL,<br>
+Weather VARCHAR(100) NOT NULL,<br>
+Roadway_Conditions VARCHAR(100) NOT NULL,<br>
+FOREIGN KEY fk(Case_Number) REFERENCES CASES(Case_Number)<br>
+);
+    </p>
     
     
   </body>
