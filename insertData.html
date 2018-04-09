@@ -13,96 +13,219 @@
     <h3> To insert test data into the model table </h3>
     
     <p>
-      INSERT INTO model (make, model, startYear, endYear, frontTire, rearTire, doors, bodyStyle, driveWheels, 
-      curbHeight, weightFront, weightRear, length, width, height, wheelbase, FOH, frontTrack, rearTrack, 
-      frontBumperHeight, rearBumperHeight, groundToBaseWindsheild, stabilityRatio, CGH, stabilityTrack)<br>
-      VALUES ('Toyota', 'Camry', '2012', '2012', '20', '20', '4', 'Normal', '4', '6', '1000', '2000', '240', '112', '90', '20', 'car', 
-      '20', '20', '16', '16', '60', '5:1', 'car', '18');
-    </p>
-    
-    <p>
-      INSERT INTO model (make, model, startYear, endYear, frontTire, rearTire, doors, bodyStyle, driveWheels, 
-      curbHeight, weightFront, weightRear, length, width, height, wheelbase, FOH, frontTrack, rearTrack, 
-      frontBumperHeight, rearBumperHeight, groundToBaseWindsheild, stabilityRatio, CGH, stabilityTrack) <br>
-      VALUES ('Toyota', 'Corolla', '2014', '2014', '20', '20', '4', 'Normal', '4', '6', '1500', '2500', '240', '112', '90', '20', 'car', 
-      '20', '20', '16', '16', '60', '5:1', 'car', '18');
+      INSERT INTO MODEL_SPECS (model_make_ID,<br>
+model_name,<br>
+model_trim,<br>
+model_year,<br>
+model_body,<br>
+model_engine_position,<br>
+model_engine_cc,<br>
+model_engine_cyl,<br>
+model_engine_type,<br>
+model_engine_valves_per_cyl,<br>
+model_engine_power_ps,<br>
+model_engine_power_rpm,<br>
+model_engine_torque_nm,<br>
+model_engine_torque_rpm,<br>
+model_engine_bore_mm,<br>
+model_engine_stoke_mm,<br>
+model_engine_compression,<br>
+model_engine_fuel,<br>
+model_top_speed_kph,<br>
+model_0_to_100_kph,<br>
+model_drive,<br>
+model_transmission_type,<br>
+model_seats,<br>
+model_doors,<br>
+model_weight_kg,<br>
+model_length_mm,<br>
+model_width_mm,<br>
+model_height_mm,<br>
+model_wheelbase_mm,<br>
+model_lkm_hwy,<br>
+model_lkm_mixed,<br>
+model_lkm_city,<br>
+model_fuel_cap_I,<br>
+model_sold_in_us,<br>
+model_co2,<br>
+model_make_display)<br>
+VALUES (<br>
+  'Toyota',<br>
+  'Camry',<br>
+  'no trim',<br>
+  '2012',<br>
+  'normal',<br>
+  '20',<br>
+  '4',<br>
+  'Normal',<br>
+  '4',<br>
+  '6',<br>
+  '1000',<br>
+  '2000',<br>
+  '240',<br>
+  '112',<br>
+  '90',<br>
+  '20',<br>
+  'car',<br>
+  '20',<br>
+  '20',<br>
+  '16',<br>
+  '16',<br>
+  '60',<br>
+  '5:1',<br>
+  'car',<br>
+  '18',<br>
+  '1',<br>
+  '1',<br>
+  '1',<br>
+  '1',<br>
+  '1',<br>
+  '1',<br>
+  '1',<br>
+  '1',<br>
+  '1',<br>
+  '1',<br>
+  '1'<br>
+);
     </p>
 
     <h3> To insert test data into the user table </h3>
     
     <p>
-      INSERT INTO user (username, name, password) <br>
-      VALUES ('headUser', 'Joe Hall', '12345');
+      INSERT INTO USERS (Username,<br>
+   Name,<br>
+   Password,<br>
+   Project_Name)<br>
+VALUES (<br>
+  'headUser',<br>
+  'Joe Hall',<br>
+  '12345',<br>
+  'project1'<br>
+);
     </p>
-    
-    <p>
-      INSERT INTO user (username, name, password) <br>
-      VALUES ('secondaryUser', 'Jim Hall', '54321');
-    </p>
-    
+       
     <h3> To insert test data into the workGroup table </h3>
     
     <p>
-      INSERT INTO workGroup (id, name) <br>
-      VALUES ('1', 'lexingtonGroup');
-    </p>
-    
-    <p>
-      INSERT INTO workGroup (id, name) <br>
-      VALUES ('2', 'lousivilleGroup');
+      INSERT INTO WORKGROUPS (ID,<br>
+  Name)<br>
+VALUES ('1',<br>
+  'lexingtonGroup'<br>
+);
     </p>
     
     <h3> To insert test data into the userWorkGroup table </h3>
     
     <p>
-      INSERT INTO userWorkGroup (username, workGroupID) <br>
-      VALUES ('headUser', 1);
-    </p>
-    
-    <p>
-      INSERT INTO userWorkGroup (username, workGroupID) <br>
-      VALUES ('secondaryUser', 2);
+      INSERT INTO USER_WORKGROUP (Username,<br>
+  WGID)<br>
+VALUES ('headUser',<br>
+  1<br>
+      );
     </p>
     
     <h3> To insert test data into the cases table </h3>
     
     <p>
-      INSERT INTO cases (name, roadConditions, street, city, state, zip, date, time, lighting, visibility, 
-      temperature, weather, investigator, userGroup) <br>
-      VALUES ('accident', 'terrible', 'main street', 'lexington', 'kentucky', '40506', '03/25/1999',
-      '12:43', 'good', 'okay', '71', 'cloudy', 'headUser', 1);
-    </p>
-    
-    <p>
-      INSERT INTO cases (name, roadConditions, street, city, state, zip, date, time, lighting, visibility, 
-      temperature, weather, investigator, userGroup) <br>
-      VALUES ('accident1', 'terrible', '1st street', 'lexington', 'kentucky', '40506', '03/27/1999',
-      '12:40', 'good', 'okay', '65', 'cloudy', 'secondaryUser', 2);
+      INSERT INTO CASES (Case_Number,<br>
+  Street,<br>
+  City,<br>
+  State,<br>
+  Zip,<br>
+  Date_Of_Accident,<br>
+  Time,<br>
+  Lead_Investigator,<br>
+  WGID,<br>
+  Creator_ID)<br>
+VALUES (1,<br>
+  'main street',<br>
+  'lexington',<br>
+  'kentucky',<br>
+  '40506',<br>
+  '03/25/1999',<br>
+  '12:43',<br>
+  'headUser',<br>
+  '1',<br>
+  'headUser'<br>
+);
     </p>
     
     <h3> To insert test data into the vehicle table </h3>
     
     <p>
-      INSERT INTO vehicle (vin, model, year, make, speed, color, airbagDeploy, state, expiration, number, 
-      caseID) <br>
-      VALUES ('19143671576', 'Toyota', '2012', 'Camry', '100', 'red', 'y',
-      'kentucky', '03/01/2018', 'JK3-007', 'accident');
+      INSERT INTO VEHICLE (VIN,<br>
+   Case_Number,<br>
+   License_Plate_Number,<br>
+   Make,<br>
+   Model,<br>
+   Year,<br>
+   Speed,<br>
+   Airbag_Deploy,<br>
+   Color,<br>
+   License_Plate_Expiration,<br>
+   License_Plate_State)<br>
+VALUES ('19143671576',<br>
+  1,<br>
+  'BAM-007',<br>
+  'Toyota',<br>
+  'Camry',<br>
+  '2012',<br>
+  '100',<br>
+  'y',<br>
+  'Red',<br>
+  '03/01/2018',<br>
+  'Kentucky'<br>
+);
     </p>
     
     <h3> To insert test data into the occupant table </h3>
     
     <p>
-      INSERT INTO occupant (id, name, impairment, seatbeltUsage, type, phoneNumber, DOB, street, state, 
-      city, zip, vin) <br>
-      VALUES ('12', 'Bob Welsh', 'none', 'y', 'seatbelt', '9991110000', '02/10/1980',
-      '12 2nd street', 'kentucky', 'lexington', '40506', '19143671576');
+      INSERT INTO OCCUPANT_INFO (ID,<br>
+  Name,<br>
+  Impairment,<br>
+  Seatbelt,<br>
+  Phone_No,<br>
+  DOB,<br>
+  Driving)<br>
+VALUES ('12',<br>
+  'Bob Welsh',<br>
+  'none',<br>
+  'y',<br>
+  '9991110000',<br>
+  '02/10/1980',<br>
+  '19143671576'<br>
+);
     </p>
     
     <h3> To insert test data into the reference table </h3>
     
     <p>
-      INSERT INTO reference (caseID, witnessNotes, personalNotes) <br>
-      VALUES ('accident1', 'car moving very fast', 'very bad accident');
+      INSERT INTO REFERENCE (Case_ID,<br>
+  Witness_Notes,<br>
+  Personal_Notes)<br>
+VALUES (1,<br>
+  'car moving very fast',<br>
+  'very bad accident'<br>
+);
+    </p>
+    
+    <h3> To insert test data into the environment table </h3>
+    
+    <p>
+      INSERT INTO ENVIRONMENT (Case_Number,<br>
+  Precipitation,<br>
+  Lighting,<br>
+  Temperature,<br>
+  Weather,<br>
+  Roadway_Conditions)<br>
+VALUES (1,<br>
+  'light rain',<br>
+  'poor',<br>
+  '74',<br>
+  'rainy',<br>
+  'moderate'<br>
+);
     </p>
     
   </body>
