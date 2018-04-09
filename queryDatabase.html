@@ -15,65 +15,72 @@
     
     <p>
     SELECT * <br>
-    FROM occupant;
+    FROM OCCUPANT_INFO;
     </p>
     
     <img src="results1.jpg" alt="image" height="300" width="800"/>
     
     <p>
     SELECT * <br>
-    FROM vehicle;
+    FROM VEHICLE;
     </p>
     
     <img src="results2.jpg" alt="image" height="300" width="800"/>
     
     <p>
     SELECT * <br>
-    FROM cases;
+    FROM CASES;
     </p>
     
     <img src="results3.jpg" alt="image" height="300" width="800"/>
     
     <p>
     SELECT * <br>
-    FROM user;
+    FROM USERS;
     </p>
     
     <img src="results4.jpg" alt="image" height="300" width="400"/>
     
     <p>
     SELECT * <br>
-    FROM workGroup;
+    FROM WORKGROUPS;
     </p>
     
     <img src="results5.jpg" alt="image" height="300" width="400"/>
     
     <p>
     SELECT * <br>
-    FROM model;
+    FROM MODEL_SPECS;
     </p>
     
     <img src="results6.jpg" alt="image" height="600" width="800"/>
     
     <p>
     SELECT * <br>
-    FROM userWorkGroup;
+    FROM USER_WORKGROUP;
     </p>
     
     <img src="results7.jpg" alt="image" height="300" width="400"/>
     
     <p>
     SELECT * <br>
-    FROM reference;
+    FROM REFERENCE;
     </p>
     
     <img src="results8.jpg" alt="image" height="300" width="500"/>
     
+        <p>
+    SELECT * <br>
+    FROM ENVIRONMENT;
+    </p>
+    
+    <img src="results11.jpg" alt="image" height="300" width="500"/>
+    
     <h3> To get the names of all individuals involved in accidents who did not wear a seatbelt</h3>
     
     <p>
-    SELECT name <br>
-    FROM occupant <br>
+    SELECT USERNAME <br>
+    FROM OCCUPANT_INFO <br>
     WHERE seatbeltUsage = 'n';
     </p>
     
@@ -82,9 +89,9 @@
     <h3> To get the count of Toyota vehicles involved in accidents</h3>
     
     <p>
-    SELECT COUNT(vin) <br>
-    FROM vehicle <br>
-    WHERE model = 'toyota';
+    SELECT COUNT(VIN) <br>
+    FROM VEHICLE <br>
+    WHERE Model = 'toyota';
     </p>
     
     <img src="results10.jpg" alt="image" height="300" width="400"/>
