@@ -14,10 +14,10 @@
     
     <p> USE MyDatabase; </p>
     
-    <h3> To build the model specs table </h3>
+    <h3> To build the model specs table - Used by DB team to build test DB</h3>
     
     <p>
-      CREATE TABLE MODEL_SPECS (<br>
+      CREATE TABLE VEHICLE_SPECS (<br>
 model_make_ID VARCHAR(45) NOT NULL,<br>
 model_name VARCHAR(45) NOT NULL,<br>
 model_trim VARCHAR(45) NOT NULL,<br>
@@ -58,7 +58,7 @@ CONSTRAINT PK_model PRIMARY KEY (model_make_id, model_name, model_year)<br>
 );
     </p>
     
-    <h3> To build the user table </h3>
+    <h3> To build the user table - Used by DB team to build test DB</h3>
     
     <p>
       CREATE TABLE USERS (<br>
@@ -69,7 +69,7 @@ Project_Name VARCHAR(45) NOT NULL<br>
 );
     </p>
     
-    <h3> To build the workGroup table </h3>
+    <h3> To build the workGroup table - Used by DB team to build test DB</h3>
     
     <p>
       CREATE TABLE WORKGROUPS (<br>
@@ -78,7 +78,7 @@ Name VARCHAR(45) NOT NULL<br>
 );
     </p>
     
-    <h3> To build the userWorkGroup table </h3>
+    <h3> To build the userWorkGroup table - Used by DB team to build test DB</h3>
     
     <p>
       CREATE TABLE USER_WORKGROUP (<br>
@@ -90,7 +90,7 @@ CONSTRAINT PK_group PRIMARY KEY (Username,WGID)<br>
 );
     </p>
     
-    <h3> To build the cases table </h3>
+    <h3> To build the cases table - Used by DB team to build test DB</h3>
     
     <p>
       CREATE TABLE CASES (<br>
@@ -110,7 +110,7 @@ FOREIGN KEY fkkk(Creator_ID) REFERENCES USERS(Username)<br>
 );
     </p>
     
-    <h3> To build the vehicle table </h3>
+    <h3> To build the vehicle table - Used by DB team to build test DB</h3>
     
     <p>
       CREATE TABLE VEHICLE (<br>
@@ -129,7 +129,7 @@ FOREIGN KEY fk(Case_Number) REFERENCES CASES(Case_Number)<br>
 );
     </p>
     
-    <h3> To build the occupant table </h3>
+    <h3> To build the occupant table - Used by DB team to build test DB</h3>
     
     <p>
      CREATE TABLE OCCUPANT_INFO (<br>
@@ -144,7 +144,7 @@ FOREIGN KEY fk(Driving) REFERENCES VEHICLE(VIN)<br>
 );
     </p>
     
-    <h3> To build the reference table </h3>
+    <h3> To build the reference table - Used by DB team to build test DB</h3>
     
     <p>
       CREATE TABLE REFERENCE (<br>
@@ -155,7 +155,7 @@ FOREIGN KEY fk(Case_ID) REFERENCES CASES(Case_Number)<br>
 );
     </p>
     
-    <h3> To build the environment table </h3>
+    <h3> To build the environment table - Used by DB team to build test DB</h3>
     
     <p>
       CREATE TABLE ENVIRONMENT (<br>
