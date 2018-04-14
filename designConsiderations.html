@@ -88,10 +88,33 @@
     <h3>The following are some of the restrictions and limitations to our design. </h3>
     
     <ul>
-      <li><b>The addition of new tables to the cloud database: </b>Will allow for even more specific data collection from officers in the field. 
-        As the system progresses and goes into actual use, new tables will need to be added so the customer is able to collect the 
-        specific information needed for his business to thrive. Additionally, over time as cars, vehicles, and roadways advance additional 
-        information may need to be collected</li>
+      <li><b>No place to store images collected at the scene: </b>As of now our system is not setup to hold <i>blob</i> data types for 
+        picture images. As this data is another crucial piece to the puzzle while analyzing an accident this will need to be added to the 
+        product in the future. Most likely a picture table will be built with two attributes, the image itself, as well as a refernce to the 
+        case ID the picture was taken at
+      </li>
+    </ul>
+    
+    <ul>
+      <li><b>Limited amount of storage avaliable: </b>As our current system is hosted on AWS's free tier storage, eventually our customer will 
+        run out space as the product goes into use. This is however a simple fix as it simply involves our customer upgrading his storage plan.
+      </li>
+    </ul>
+    
+    <ul>
+      <li><b>Connectivity: </b>To connect to our product either the mobile or desktop application must be at a location with access to the 
+        internet. As this is the overall idea behind a cloud database, there is nothing that can be done in the future to solve this issue.
+        However, one advancement the mobile team may want to make is have a protocol in place so that if the accident is somewhere remote with 
+        no cell service, their app stores the collected data locally on the phone and then sends it up to the cloud once the device is in range of 
+        a signal.
+      </li>
+    </ul>
+    
+    <ul>
+      <li><b>Analyse of the data: </b>A major reason many companies use AWS is because they pay for Amazon to analyze their data and spot 
+        trends in it. At the moment this service is not used by our customer but its an upgrade he can make at a later date if he ever wanted 
+        to.
+      </li>
     </ul>
     
   </body>
