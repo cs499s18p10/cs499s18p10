@@ -12,58 +12,59 @@
       <li><b>Amazon AWS vs Microsoft Azure: </b>The first major issue we faced in our project was choosing a cloud database provider 
       to go with. With the two major options being Amazon AWS and Microsoft Azure, we figured going with one of these systems would probably
       be our best option. After doing a significant amount of research on the pros and cons of each system, in the end we decided to go 
-      with Amazon AWS. AWS offered numerous easy to use "get help" videos and also a simplified extra layer of added security needed by our 
+      with Amazon AWS. AWS offered numerous easy to use "get help" videos and a simplified extra layer of added security needed by our
       customer.</li>
     </ul>
     <ul>
-      <li><b>Designing the schema of the database: </b>The second major challenged faced by our team was actually designing the database. 
+      <li><b>Designing the schema of the database: </b>The second major challenged faced by our team was designing the database. 
         We set about our design using the conventional methods, ER Diagrams and Relational Schemas. During this stage we first met with our 
-        customer to talk about what type of data he was looking to connect and the connections within it. We then developed an ER Diagram and 
-        went back and forth with our customer over about a week-long span until we arrived at a final layout he was pleased with. This design 
-        also continued to progress throughout the semester as new attributes were thought of and advancements were considered. 
+        customer to talk about what type of data he was looking to collect, and the connections within it. We then developed an ER Diagram and 
+        went back and forth with our customer modifying it until we arrived at a final layout he was pleased with. This design 
+        continued to progress throughout the semester as new attributes were added and advancements were considered.
       </li>
     </ul>
     <ul>
-      <li><b>Being one sub-team within a larger three team project: </b>One of the hardest challenges facing our team was simply the overall 
+      <li><b>Part of a Multi-team project: </b>One of the toughest challenges facing our team was simply the overall 
         scale of the project. Throughout the semester our team had to ensure we were in near constant communication with both the desktop 
-        application and mobile application teams. This in and of itself was a challenge as it involved synchronization between over 10 seperate 
-        people. We had to ensure our product was accessible and functioned correctly as it is the backend that allows both applications to thrive.
+        and mobile application teams. This, in and of itself, was a challenge as it involved synchronization between over 10 separate 
+        people. In the end we had to ensure our product was accessible and functioned correctly as it is the backend that allows both 
+        applications to thrive.
       </li>
     </ul>
     <ul>
-      <li><b>Connection protocols with mobile application: </b>Connecting our product to desktop was extremely simple as it involved just 
+      <li><b>Connection protocols with mobile application: </b>Connecting our product to desktop was simple as it involved 
         inserting a URL into their code, typical of the way databases are connected to products. However, connecting to the mobile application 
-        was a different beast altogether. As mobile developed their product with <i>React Native</i> and other development library, our teams 
-        had to search long and hard for the correct way to make a connection. In the end we solved the problem with a creating a seperate PHP page 
+        was a different beast altogether. As mobile developed their product with <i>React Native</i> and other development libraries, our team 
+        had to search long and hard for the correct way to make a connection. In the end we solved the problem with creating a separate PHP page 
         on our service to build a connection that <i>React Native </i> could then access.
       </li>
     </ul>
     <ul>
-      <li><b>Developing security protocols for the system: </b>As our customer plans to one-day use our design as a baseline for a business 
-        he is starting, he wanted a sound-proof of plan layout that would allow for security within his product as he will be dealing with 
-        confidential information. Our product initiates security through the use of a password at login. This password is then hashed at the 
+      <li><b>Developing security protocols for the system: </b>As our customer plans to one-day use our design as a baseline for his business, 
+        he wanted a sound-proof plan that would allow for security within his product as he will be dealing with 
+        confidential information. Our product initiates security using a password at login. This password is then hashed at the 
         application level before being sent to and checked against the database for accuracy. Our team also came up with the idea of <i>Work-Groups
-        </i> which are used to combine users into groups based on the specific cases they are analyzing and have access to. 
+        </i> which are used to combine users into groups based on the specific cases they are analyzing and can access.
       </li>
     </ul>
     <ul>
-      <li><b>Inserting the initial vehicle specs information into the cloud: </b>Another challenge our team faced early in the semester was 
-        in uploading a massive vehicle specs file into the cloud. In order to understand the size of this file, imagine a table with over 30 
-        seperate columns (attributes) containing everything from make and model, to number of doors, to the weight and height of the vehicle. 
-        Then imagine this file having over 64,000 rows, a row for nearly every car make and model built since the 1970's. Inserting this file 
-        and uploading it to the cloud was no simple task. In the end our team solved this issue through the use of MySQL Workbench which actually 
-        makes this process very simple. We found numerous vidoes demenstrating how initial data could be uploaded which we followed. 
+      <li><b>Inserting the initial vehicle specs data to the cloud: </b>Another challenge our team faced early in the semester was 
+        in uploading a massive vehicle specs file to the cloud. To understand the size of this file, imagine a table with over 30 
+        separate columns, attributes, containing everything from make and model, to number of doors, to the weight and height of the vehicle. 
+        Then imagine this file having over 64,000 rows, a row for nearly every car make and model built since the 1970's. Inserting this data 
+        and uploading it to the cloud was no simple task. In the end our team solved this issue using MySQL Workbench which actually 
+        simplified this process. We found numerous videos demonstrating how initial data could be uploaded which were followed.
       </li>
     </ul>
     <ul>
-      <li><b>Developing intial SQL queries used by both the desktop and mobile teams: </b>One of the last challenges our team ran into 
+      <li><b>Developing initial SQL queries used by both desktop and mobile: </b>One of the final issues our team ran into 
         was in developing the initial SQL queries needed for both desktop and mobile. Developing the initial queries themselves wasn't 
-        difficult as 3 out of 4 team members had taken a database class before. Instead, the difficult part was in testing our queries. 
-        As testing our queries involved actually running them on desktop or mobile through the cloud this process was slow as we had to 
-        wait for these teams to work our queries into their system, and then wait for them to run them and hear back from them. Once we realized 
-        this process was not optimal, we decided to built a replica of our database on one of our own personal machines so queries could easily 
-        be developed and de-bugged in house. This simplified the process as we were then able to hang over working queries to both desktop and mobile 
-        that they didn't have to worry about testing.
+        difficult as 3 out 4 team members had taken a database class before. Instead, the difficult part was in testing the queries. 
+        As testing our queries involved running them on either the desktop or mobile application against the cloud, this process was slow. 
+        Our team had to wait for these other teams to work our queries into their system, and then wait for them to run them and hear back 
+        from them. Once we realized this process was not optimal, we decided to build a replica of our database on one of our own 
+        personal machines. This allowed queries to be easily developed and de-bugged in house. This simplified the process as we were 
+        then able to hand over working queries to both teams.
       </li>
     </ul>
     
