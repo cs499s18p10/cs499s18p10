@@ -71,15 +71,15 @@
     <h3>The following are some of the major changes we had to make to our design during implementation. </h3>
     
     <ul>
-      <li><b>The addition of new attributes to our schema: </b>As the semester progressed numerous times we added in new attributes to
-        our database design. Many times our customer either asked for a new field, or we even suggested it to him, and it was added in to 
+      <li><b>The addition of new attributes to our schema: </b>As the semester progressed, numerous times we added in new attributes to
+        our database design. Many times our customer either asked for a new field, or we suggested one to him, and it was added in to 
         the proper table.
       </li>
     </ul>
     
     <ul>
       <li><b>The addition of new tables to our schema: </b>After our team hashed out the <i>Workgroups</i> layer of security and presented 
-        it to our customer we then added in this table to our schema. We also added in the coefficient of friction tables to our reference 
+        it to our customer, we then added in this table to our schema. We also added in the coefficient of friction tables to our reference 
         schema about midway through. As our customer advances his design and product, he will likely continue to add new tables and attributes 
         in the future.
       </li>
@@ -88,32 +88,31 @@
     <h3>The following are some of the restrictions and limitations to our design. </h3>
     
     <ul>
-      <li><b>No place to store images collected at the scene: </b>As of now our system is not setup to hold <i>blob</i> data types for 
-        picture images. As this data is another crucial piece to the puzzle while analyzing an accident this will need to be added to the 
-        product in the future. Most likely a picture table will be built with two attributes, the image itself, as well as a refernce to the 
-        case ID the picture was taken at
+      <li><b>Storing images collected at the scene: </b>As of now, our system is not setup to hold <i>blob</i> data types for 
+        picture images. As this data is a crucial piece to the puzzle of analyzing an accident, this will need to be added to the 
+        product in the future. Most likely a picture table will be built with two attributes, the image itself, as well as a reference to the 
+        case ID the picture was taken at.
       </li>
     </ul>
     
     <ul>
       <li><b>Limited amount of storage avaliable: </b>As our current system is hosted on AWS's free tier storage, eventually our customer will 
-        run out space as the product goes into use. This is however a simple fix as it simply involves our customer upgrading his storage plan.
+        run out space as the product is used. This is a simple fix as it involves our customer upgrading his storage plan.
       </li>
     </ul>
     
     <ul>
       <li><b>Connectivity: </b>To connect to our product either the mobile or desktop application must be at a location with access to the 
-        internet. As this is the overall idea behind a cloud database, there is nothing that can be done in the future to solve this issue.
-        However, one advancement the mobile team may want to make is have a protocol in place so that if the accident is somewhere remote with 
-        no cell service, their app stores the collected data locally on the phone and then sends it up to the cloud once the device is in range of 
-        a signal.
+        internet. As this is the overall idea behind cloud databases, there is nothing that can be done in the future to solve this issue.
+        However, one advancement the mobile team may want to implement is put in place a protocol that allows data to be collected 
+        in remote locations without cell service. This protocol would then allow for their app to store the data locally on the device 
+        and then upload it to the cloud once in range of a signal.
       </li>
     </ul>
     
     <ul>
-      <li><b>Analyse of the data: </b>A major reason many companies use AWS is because they pay for Amazon to analyze their data and spot 
-        trends in it. At the moment this service is not used by our customer but its an upgrade he can make at a later date if he ever wanted 
-        to.
+      <li><b>Analyse of data: </b>A major reason many companies use AWS is because they pay for Amazon to analyze their data and spot 
+        trends. At the moment, this service is not used by our customer but it’s an upgrade he can make later if need be.
       </li>
     </ul>
     
