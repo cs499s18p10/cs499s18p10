@@ -8,9 +8,71 @@
     
     <h3>The following are some of the issues we ran into throughout the semester while developing our project. </h3>
     
+    <ul>
+      <li><b>Amazon AWS vs Microsoft Azure: </b>The first major issue we faced in our project was choosing a cloud database provider 
+      to go with. With the two major options being Amazon AWS and Microsoft Azure, we figured going with one of these systems would probably
+      be our best option. After doing a significant amount of research on the pros and cons of each system, in the end we decided to go 
+      with Amazon AWS. AWS offered numerous easy to use "get help" videos and also a simplified extra layer of added security needed by our 
+      customer.</li>
+    </ul>
+    <ul>
+      <li><b>Designing the schema of the database: </b>The second major challenged faced by our team was actually designing the database. 
+        We set about our design using the conventional methods, ER Diagrams and Relational Schemas. During this stage we first met with our 
+        customer to talk about what type of data he was looking to connect and the connections within it. We then developed an ER Diagram and 
+        went back and forth with our customer over about a week-long span until we arrived at a final layout he was pleased with. This design 
+        also continued to progress throughout the semester as new attributes were thought of and advancements were considered. 
+      </li>
+    </ul>
+    <ul>
+      <li><b>Being one sub-team within a larger three team project: </b>One of the hardest challenges facing our team was simply the overall 
+        scale of the project. Throughout the semester our team had to ensure we were in near constant communication with both the desktop 
+        application and mobile application teams. This in and of itself was a challenge as it involved synchronization between over 10 seperate 
+        people. We had to ensure our product was accessible and functioned correctly as it is the backend that allows both applications to thrive.
+      </li>
+    </ul>
+    <ul>
+      <li><b>Connection protocols with mobile application: </b>Connecting our product to desktop was extremely simple as it involved just 
+        inserting a URL into their code, typical of the way databases are connected to products. However, connecting to the mobile application 
+        was a different beast altogether. As mobile developed their product with <i>React Native</i> and other development library, our teams 
+        had to search long and hard for the correct way to make a connection. In the end we solved the problem with a creating a seperate PHP page 
+        on our service to build a connection that <i>React Native </i> could then access.
+      </li>
+    </ul>
+    <ul>
+      <li><b>Developing security protocols for the system: </b>As our customer plans to one-day use our design as a baseline for a business 
+        he is starting, he wanted a sound-proof of plan layout that would allow for security within his product as he will be dealing with 
+        confidential information. Our product initiates security through the use of a password at login. This password is then hashed at the 
+        application level before being sent to and checked against the database for accuracy. Our team also came up with the idea of <i>Work-Groups
+        </i> which are used to combine users into groups based on the specific cases they are analyzing and have access to. 
+      </li>
+    </ul>
+    <ul>
+      <li><b>Inserting the initial vehicle specs information into the cloud: </b>Another challenge our team faced early in the semester was 
+        in uploading a massive vehicle specs file into the cloud. In order to understand the size of this file, imagine a table with over 30 
+        seperate columns (attributes) containing everything from make and model, to number of doors, to the weight and height of the vehicle. 
+        Then imagine this file having over 64,000 rows, a row for nearly every car make and model built since the 1970's. Inserting this file 
+        and uploading it to the cloud was no simple task. In the end our team solved this issue through the use of MySQL Workbench which actually 
+        makes this process very simple. We found numerous vidoes demenstrating how initial data could be uploaded which we followed. 
+      </li>
+    </ul>
+    
     <h3>The following are some of the major changes we had to make to our design during implementation. </h3>
     
+    <ul>
+      <li><b>The addition of new tables to the cloud database: </b>Will allow for even more specific data collection from officers in the field. 
+        As the system progresses and goes into actual use, new tables will need to be added so the customer is able to collect the 
+        specific information needed for his business to thrive. Additionally, over time as cars, vehicles, and roadways advance additional 
+        information may need to be collected</li>
+    </ul>
+    
     <h3>The following are some of the restrictions and limitations to our design. </h3>
+    
+    <ul>
+      <li><b>The addition of new tables to the cloud database: </b>Will allow for even more specific data collection from officers in the field. 
+        As the system progresses and goes into actual use, new tables will need to be added so the customer is able to collect the 
+        specific information needed for his business to thrive. Additionally, over time as cars, vehicles, and roadways advance additional 
+        information may need to be collected</li>
+    </ul>
     
   </body>
  </html>
